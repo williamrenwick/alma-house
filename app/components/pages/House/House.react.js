@@ -28,7 +28,11 @@ var House = React.createClass({
     componentWillUnmount : function() {},
 
     componentDidMount: function() {
-        ScrollActions.scrollPosUpdate($(window).scrollTop());
+        var scrollTop = $(window).scrollTop();
+
+        console.log(scrollTop);
+
+        ScrollActions.scrollPosUpdate(scrollTop);
     },
 
     getStyle: function() {
