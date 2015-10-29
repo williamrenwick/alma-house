@@ -45,7 +45,7 @@ var Homepage = React.createClass({
         this.routeTo('#the-house'); 
 
         return (
-            <div id='header-image'>
+            <div id='header-image' style={{backgroundImage: 'url(img/gallery/headerImage.png)'}}>
                 <div id='header-logo'></div>
                 <NextPage {...this.props}/>
             </div>

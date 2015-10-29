@@ -55,6 +55,7 @@ var NextPage = React.createClass({
             style.top = '0%';
             style.height = '100%';
             style.backgroundColor = '#ffffff';
+            style.opacity = '1';
         } else {
             style.top = '100%';
             style.height = '100%';
