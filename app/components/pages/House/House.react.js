@@ -6,6 +6,7 @@ var HouseContent = require('./HouseContent.react.js');
 
 var mixin = require('baobab-react/mixins').branch;
 var RouteActions = require('../../../actions/RouteActions.js');
+var ScrollActions = require('../../../actions/ScrollActions.js');
 
 var House = React.createClass({
 
@@ -25,6 +26,10 @@ var House = React.createClass({
     },
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
+
+    componentDidMount: function() {
+        ScrollActions.scrollPosUpdate($(window).scrollTop());
+    },
 
     getStyle: function() {
         var style = {

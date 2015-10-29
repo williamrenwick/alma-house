@@ -21,9 +21,6 @@ var Homepage = React.createClass({
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
 
-    componentDidMount: function() {
-        $(window).scrollTop(0);
-    },
     render : function() {
         return (
             <div id='header-image' style={{backgroundImage: 'url(img/headerImage.png)'}}>
