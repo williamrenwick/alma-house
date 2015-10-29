@@ -1439,7 +1439,7 @@ p {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
+  width: 10px;
 }
 
 /* line 1040, preprocessor/main.scss */
