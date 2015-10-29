@@ -25,8 +25,6 @@ var Homepage = React.createClass({
         $(window).scrollTop(0);
     },
     render : function() {
-        this.routeTo('#the-house'); 
-
         return (
             <div id='header-image' style={{backgroundImage: 'url(img/headerImage.png)'}}>
                 <div id='header-logo'></div>
