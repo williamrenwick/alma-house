@@ -1,0 +1,1132 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+body {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*@font-face {
+  font-family: 'apercu';
+  font-weight: 400;
+  src: url('../public/fonts/apercu-webfont.woff') format('woff');
+}*/
+
+
+$swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+$swift-ease-in-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+$swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+
+
+////////////////////////////// ---- MIXINS ---- //////////////////////////////
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+@mixin vertical-align {
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+@mixin horizontal-align {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+@mixin center-align {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+@mixin bg-image($position) {
+    background-repeat: no-repeat;
+    background-position: $position;
+}
+@mixin fadeInLeft($amount) {
+    -webkit-transform: translateX($amount);
+    -moz-transform: translateX($amount);
+    -o-transform: translateX($amount);
+    -ms-transform: translateX($amount);
+    transform: translateX($amount);
+    opacity: 0;   
+}
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+@mixin vendor-prefix($name, $argument) {
+    -webkit-#{$name}: #{$argument};
+    -ms-#{$name}: #{$argument};
+    -moz-#{$name}: #{$argument};
+    -o-#{$name}: #{$argument};
+    #{$name}: #{$argument};
+}
+@mixin transform-transition ($time) {
+    -webkit-transition: -webkit-transform #{$time};
+    -ms-transition: -ms-transform #{$time};
+    -moz-transition: -moz-transform #{$time};
+    -o-transition: -o-transform #{$time};
+    transition: transform #{$time};
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>> ---- MIXIN END---- <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+////////////////////////////// ---- COMMON ---- //////////////////////////////
+* {
+    font-family: 'avenir';
+    -webkit-font-smoothing: antialiased;
+    @include box-sizing(border-box);
+    @include clearfix;
+
+}
+.noScroll {
+    overflow: hidden;
+}
+
+#reactWrap {
+    height: 100%;
+}
+#sub-menu-bg {
+    position: fixed;
+    background-color: #ffffff;
+    top: 50px;
+    width: 100%;
+    height: 55px;
+    z-index: 10;
+}
+#next-page {
+    position: fixed;
+    left: 70px;
+    bottom: 0;
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+#next-page-line {
+    position: relative;
+    float: left;
+    top: 100%;
+    width: 3px;
+    height: 100%;
+    background-color: #ffffff;
+    @include vendor-prefix(transition, all 0.2s);
+}
+#next-page-text {
+    position: relative;
+    width: calc(100% - 23px);
+    top: 0;
+    margin-left: 20px;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'brown';
+    font-size: 12px;
+    font-weight: 800;
+    @include vendor-prefix(transition, all 0.2s); 
+    @include vendor-prefix(transform, translateY(20px)); 
+}
+#next-page:hover #next-page-text {
+    @include vendor-prefix(transform, translateY(0px)); 
+
+    &:after {
+        content: '';
+        width: 9px;
+        height: 20px;
+        background-size: contain;
+        @include bg-image(center); 
+    }
+}
+
+#menu-main-wrap {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+}
+#menu-main-inner {
+    position: absolute;
+    @include center-align
+}
+#menu-main-inner ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+#menu-main-inner li {
+    color: #ffffff;
+    font-size: 26px;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+#menu-main-inner li span {
+    border-bottom: 2px solid #ffffff;
+}
+#side-menu-bar, #top-menu-bar {
+    z-index: 102;
+}
+#side-menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+#top-menu-bar {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+#top-menu-bg {
+    width: 100%;
+    height: 100%;
+}
+#side-menu-bg {
+    width: 100%;
+    height: 100%;
+    @include vendor-prefix(transition, all 0.2s);
+}
+#menu-button {
+    position: absolute;
+    top: 20px;
+    width: 18px;
+    height: 10px;
+    cursor: pointer;
+    z-index: 101;
+}
+#side-menu-bar #menu-button {
+    top: 20px;
+    @include horizontal-align;
+}
+#top-menu-bar #menu-button {
+    left: 16px;
+    @include vertical-align;
+}
+#menu-button span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    @include vertical-align;
+
+    &:after, &:before {
+        content: '';
+        position: absolute;
+        width:100%;
+        height: 2px;
+        background-color: #ffffff;
+    }
+
+    &:before {
+        top: -4px;
+    }
+    &:after {
+        bottom: -4px;
+    }
+}
+#menu-button.isOpen span {
+    @include vendor-prefix(transform, rotate(-45deg));
+    &:before {
+        top: 0px;
+        opacity: 0;
+    }
+    &:after {
+        bottom: 0px;
+        @include vendor-prefix(transform, rotate(90deg));
+    }
+}
+#side-page-title {
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    text-transform: uppercase;
+    @include vendor-prefix(transform, rotate(-90deg));
+    z-index: 11;
+}
+#page-title-line {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 16px;
+    height: 2px;
+    margin-top: -2px;
+}
+#main-content-logo {
+    position: fixed;
+    top: 20px;
+    right: 30%;
+    width: 200px;
+    height: 36px;
+    background-image: url(../public/img/logo-black.png);
+    background-size: contain;
+    @include bg-image(center);
+    z-index: 10;
+}
+
+#side-page-title h1 {
+    font-family: 'brown';
+    font-size: 12px;
+}
+p {
+    font-family: 'brandon text';
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.7em;
+    margin: 0;
+}
+#house-wrap, #booking-wrap {
+    position: absolute;
+    left: 50px;
+    width: calc(100% - 50px);
+    padding-top: 10vh;
+    padding-left: 50px;
+}
+.multi-col {
+    float: left;
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>> ---- COMMON END---- <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+
+////////////////////////////// ---- HEADER ---- //////////////////////////////
+
+#header-image {
+    width: 100%;
+    height: 120vh;
+    background-color: #9ddbdc;
+    background-image: url(../public/img/header-image.jpg);
+    background-size: cover;
+    @include bg-image(center);
+}
+#header-logo {
+    position: absolute;
+    right: 30%;
+    width: 235px;
+    height: 36px;
+    background-image: url(../public/img/logo-white.png);
+    background-size: contain;
+    @include bg-image(center);
+    @include vertical-align;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>> ---- HEADER END---- <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+
+////////////////////////////// ---- HOUSE ---- //////////////////////////////
+
+#intro-img-1 {
+    width: 100%;
+    @include aspect-ratio(1177, 542);
+}
+#intro-img-2 {
+    float: right;
+    width: 47%;
+    margin-top: 60px;
+    @include aspect-ratio(450, 252);
+}
+#intro-img-3 {
+    width: 62.573099415%;
+    margin-right: 3.39%;
+    @include aspect-ratio(652, 458);
+}
+#intro-img-4 {
+    width: 34.03%;
+    @include aspect-ratio(354, 458);
+}
+#bed-img-1 {
+    width: 43.8596491%;
+    @include aspect-ratio(450, 293);
+}
+#bed-img-2, #bed-img-3, #bed-img-4 {
+    width: 28.0701754%;
+    @include aspect-ratio(290, 233);
+}
+#bed-img-2, #bed-img-3 {
+    margin-right: 7.8947369%;
+}
+#outside-img-1 {
+    width: 53.216374269%;
+    @include aspect-ratio(546, 272);
+}
+#relaxation-img-1 {
+    width: 43.85%;
+    @include aspect-ratio(450, 274);
+}
+.content {
+    background-size: cover;
+    @include bg-image(center);
+}
+#intro-inner-wrap, #bedroom-inner-wrap, #outside, #relaxation, #extraInfo {
+    width: 100%;
+    padding-left: 6.530214426%;
+    padding-right: 50px;
+}
+#intro-top-row {
+    position: relative;
+    padding-left: 6.432748538%;
+    margin-bottom: 3.39%;
+}
+#intro-text {
+    width: 49.6410579%;
+    padding: 20px;
+    margin-right: 2.6%; 
+    background-color: #ffffff;
+    @include vendor-prefix(transform, translateY(-38px));  
+}
+#house-content-wrap h1 {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0 2em 0;
+}
+#bedRow1 {
+    margin-top: 100px;
+}
+#bedRow2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#bedText {
+    width: 32.86%;
+    margin-left: 12.2807018%;
+    margin-top: 2em;
+}
+#outside {
+    position: relative;
+    margin-bottom: 50px;
+}
+#outsideText {
+    position: relative;
+    width: 34.502924%;
+    margin-left: 9.356725146%;
+    margin-right: 2.923976608%;
+}
+#relaxationText {
+    width: 34.502923976%;
+    margin-left: 12.280701754%;
+    margin-right: 9.356725146%
+}
+#extraInfo {
+    margin-bottom: 160px;
+}
+.extraRow {
+    margin-top: 50px;
+}
+#extraRow1 li {
+    margin-bottom: 0.3em;
+}
+#extraRow1 span {
+    display: inline-block;
+    margin-right: 0.6em;
+}
+#extraRow2 li {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 50%;
+    line-height: 2.8em;
+}
+#extraRow2 span {
+    display: inline-block;
+}
+.extra-col {
+    padding-top: 1em;
+    border-top: 2px solid #cadffe;
+}
+#extraInfo ul, #extraInfo li {
+    list-style: none;
+    padding: 0;
+    color: #8b8888;
+    font-size: 15px;
+}
+#extraInfo .list-bold {
+    font-weight: 600;
+}
+#the-cottage, #amenities {
+    width: 53.118908382%;
+    margin-right: 2.923976608%;
+}
+#usefulLinks {
+    width: 43.859649122%;
+}
+#usefulLinks ul {
+    float: left;
+    width: 36%;
+    margin-right: 6.6%;
+}
+#usefulLinks li.title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+#usefulLinks li.link {
+    text-decoration: underline;
+}
+.amenities-icon {
+    position: absolute;
+    width: 30px;
+    height: 26px;
+    @include bg-image(center);
+    background-size: contain;
+    @include vertical-align;
+}
+.amenities-text {
+    margin-left: 40px;
+}
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>> ---- HOUSE END---- <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+
+////////////////////////////// ---- BOOKING ---- //////////////////////////////
+#booking-wrap {
+    padding-top: 200px;
+}
+#booking {
+    margin-bottom: 60px;
+}
+#booking-contact-buttons {
+    position: fixed;
+    float: left;
+    width: 20.13536379%;
+    margin-left: 11.590524534%;
+}
+#booking-contact-buttons ul {
+    list-style: none;
+    line-height: 1.2em;
+}
+#booking-contact-buttons li {
+    position: relative;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #b6bfc9;
+    cursor: pointer;
+}
+#booking-contact-buttons li.active {
+    color: #3a3939;
+    margin-left: 30px;
+
+    &:after {
+        position: absolute;
+        content: '';
+        left: -30px;
+        width: 20px;
+        height: 2px;
+        background-color: #3a3939;
+        @include vertical-align;
+    }
+}
+#content-wrapper {
+    float: left;
+    margin-left: 34.26395939%;
+    width: 59.221658206%;
+}
+#bookingRow1,
+#contactRow1 {
+    margin-bottom: 50px;
+    border-top: 2px solid #b6bfc9;
+}
+#bookingRow1 h1, #contactRow1 h1 {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0.6em 0 2em 0;
+}
+#bookingRow2 h1,
+#contact-detail-row h1 {
+    font-weight: 600;
+    font-size: 11px;
+    margin: 0.6em 0 2em 0;
+    text-transform: uppercase;
+}
+#bookingRow2 h1 span {
+    padding-top: 8px;
+    border-top: 2px solid #b6bfc9;
+}
+#contact-detail-row h1 span {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #b6bfc9;
+}
+#booking-info {
+    width: 63.714285714%;
+}
+#booking-download {
+    position: relative;
+    width: 27.428571428%;
+    margin: 0 3.142857142% 0 5.714285714%;
+}
+#download-innerwrap {
+    position: absolute;
+    width: 100%;
+    @include center-align;
+}
+#booking-download h1 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+#download-button {
+    position: relative;
+    margin: 0 auto;
+    width: 87px;
+    padding: 10px 6px;
+    font-size: 9px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1em;
+    border: 2px solid #3a3939;
+    cursor:pointer;
+}
+#price-list {
+    padding: 0;
+    list-style: none;
+}
+#price-list span {
+    display: inline-block;
+}
+#price-list li {
+    width: 50%;
+    float: left;
+    line-height: 1.4em;
+    margin-bottom: 1.6em;
+}
+#price-list .prices {
+    font-size: 21px;
+    font-weight: 600;
+    margin-right: 1em;
+}
+#price-list .currency {
+    font-size: 0.6em;
+}
+#contact-detail-row {
+    margin-bottom: 30px;
+}
+#address {
+    margin-right: 20%;
+}
+#contact-detail-row h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#contact-detail-row p {
+    margin-top: 29px;
+    line-height: 1em;
+}
+#map-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+}
+#map-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>> ---- BOOKING END---- <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (max-width: 768px) {
+
+    #header-logo {
+        right: auto;
+        @include center-align;
+    }
+    #main-content-logo {
+        top: 17px;
+        right: 10%;
+        width: 140px;
+        height: 17px;
+        z-index: 102;
+        background-image: url(../public/img/logo-white.png);
+    }
+
+    #next-page {
+        position: fixed;
+        top: 60px;
+        left: auto;
+        right: 20px;
+        bottom: 0;
+        width: 20px;
+        height: 12px;
+        margin-top: 0.67em;
+        cursor: pointer; 
+    }
+    #next-page-arrow {
+        width: 100%;
+        height: 100%;
+        @include bg-image(center);
+        background-size: contain;
+        background-image: url(../public/img/arrow-grey-right.png);
+    }
+    #side-page-title {
+        position: fixed;
+        top: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        @include horizontal-align; 
+    }
+    #side-page-title h1 {
+        font-family: 'brown';
+        font-size: 12px;
+    }
+    #page-title-line {
+        top: 100%;
+        @include horizontal-align;
+    }
+    #house-wrap, #booking-wrap {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-top: 15vh;
+        padding-left: 0px;
+    }
+    #intro-top-row {
+        padding-left: 0%;
+    }
+    #intro-text {
+        width: 100%;
+        padding: 20px;
+        margin-right: 0%;
+    }
+    #intro-img-2 {
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+    }
+    #bedRow1 {
+        margin-top: 20px;
+    }
+    #bedText {
+        float: left;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 2em;
+    }
+    #bed-img-1 {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #outsideText, #relaxationText {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    #outside-img-1, #relaxation-img-1 {
+        width: 100%;
+        position: relative;
+    }
+    .extraRow {
+        margin-top: 20px;
+    }
+    #the-cottage {
+        margin-top: 30px;
+    }
+    #the-cottage, #amenities {
+        width: 100%;
+        margin-right: 0%;
+    }
+    #usefulLinks {
+        margin-top: 20px;
+        width: 100%;
+    }
+    #booking-wrap {
+        padding-top: 12vh;
+    }
+    #content-wrapper {
+        float: left;
+        margin-left: 0;
+        width: 100%;
+        padding-left: 6.530214426%;
+        padding-right: 6.530214426%;
+    }
+}
+@media only screen and (max-width: 768px) {
+
+    #header-logo {
+        right: auto;
+        @include center-align;
+    }
+    #main-content-logo {
+        top: 17px;
+        right: 10%;
+        width: 140px;
+        height: 17px;
+        z-index: 102;
+        background-image: url(../public/img/logo-white.png);
+    }
+
+    #next-page {
+        position: fixed;
+        top: 60px;
+        left: auto;
+        right: 20px;
+        bottom: 0;
+        width: 20px;
+        height: 12px;
+        margin-top: 0.67em;
+        cursor: pointer; 
+    }
+    #next-page-arrow {
+        width: 100%;
+        height: 100%;
+        @include bg-image(center);
+        background-size: contain;
+        background-image: url(../public/img/arrow-grey-right.png);
+    }
+    #side-page-title {
+        position: fixed;
+        top: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        @include horizontal-align; 
+    }
+    #side-page-title h1 {
+        font-family: 'brown';
+        font-size: 12px;
+    }
+    #page-title-line {
+        top: 100%;
+        @include horizontal-align;
+    }
+    #house-wrap, #booking-wrap {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-top: 15vh;
+        padding-left: 0px;
+    }
+    #intro-top-row {
+        padding-left: 0%;
+    }
+    #intro-text {
+        width: 100%;
+        padding: 20px;
+        margin-right: 0%;
+    }
+    #intro-img-2 {
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+    }
+    #bedRow1 {
+        margin-top: 20px;
+    }
+    #bedText {
+        float: left;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 2em;
+    }
+    #bed-img-1 {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #outsideText, #relaxationText {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    #outside-img-1, #relaxation-img-1 {
+        width: 100%;
+        position: relative;
+    }
+    .extraRow {
+        margin-top: 20px;
+    }
+    #the-cottage {
+        margin-top: 30px;
+    }
+    #the-cottage, #amenities {
+        width: 100%;
+        margin-right: 0%;
+    }
+    #usefulLinks {
+        margin-top: 20px;
+        width: 100%;
+    }
+    #booking-wrap {
+        padding-top: 12vh;
+    }
+    #content-wrapper {
+        float: left;
+        margin-left: 0;
+        width: 100%;
+        padding-left: 6.530214426%;
+        padding-right: 6.530214426%;
+    }
+}
+@media only screen and (max-width: 600px) {
+ #booking-info {
+    width: 100%;
+ }
+ #booking-download {
+    position: relative;
+    width: 100%;
+    margin: 0;
+ }
+}
+@media only screen and (max-width: 456px) {
+ #telephone {
+    margin-top: 20px;
+ }
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
