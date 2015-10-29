@@ -1,4 +1,4 @@
-var ScrollActions = require('../actions/scrollActions.js');
+var ScrollActions = require('../actions/ScrollActions.js');
 var debounce = require('lodash.debounce');
 
 var $window = $(window);
