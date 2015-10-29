@@ -401,9 +401,8 @@ p {
 
 #header-image {
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     background-color: #9ddbdc;
-    background-image: url(../public/img/headerImage.png);
     background-size: cover;
     @include bg-image(center);
 }

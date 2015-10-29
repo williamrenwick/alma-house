@@ -24,23 +24,6 @@ var Homepage = React.createClass({
     componentDidMount: function() {
         $(window).scrollTop(0);
     },
-
-    shouldIRoute: function() {
-        if (this.state.scrollPos > this.state.windowH * 0.18) {
-            return true
-        } else {
-            return false
-        }
-    },
-    routeTo: function(newRoute) {
-        var iShouldRoute = this.shouldIRoute()
-
-        if (iShouldRoute == true) {
-            console.log(iShouldRoute)
-
-            window.location.hash = newRoute
-        }
-    },
     render : function() {
         this.routeTo('#the-house'); 
 
