@@ -381,7 +381,7 @@ p {
     line-height: 1.7em;
     margin: 0;
 }
-#house-wrap, #booking-wrap {
+#house-wrap, #booking-wrap, #gallery-wrap {
     position: absolute;
     left: 50px;
     width: calc(100% - 50px);
@@ -402,9 +402,22 @@ p {
 #header-image {
     width: 100%;
     height: 100vh;
-    background-color: #9ddbdc;
+    background-color: rgba(157,219,220,0.81);
     background-size: cover;
     @include bg-image(center);
+}
+#intro-vid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover; 
 }
 #header-logo {
     position: absolute;
@@ -549,6 +562,12 @@ p {
     color: #8b8888;
     font-size: 15px;
 }
+#the-cottage ul {
+    margin-top: 50px;
+}
+#the-cottage li {
+    margin-bottom: 0.7em;
+}
 #extraInfo .list-bold {
     font-weight: 600;
 }
@@ -587,7 +606,188 @@ p {
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>> ---- HOUSE END---- <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+////////////////////////////// ---- GALLERY ---- //////////////////////////////
 
+#gallery-wrap {
+    height: 100%;
+    padding: 0;
+}
+#gallery-slideshow {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    @include center-align;
+}
+#gallery-slide {
+    width: 100%;
+    height: 100%;
+    @include bg-image(center);
+    background-size: cover;
+}
+#slide-info {
+    position: absolute;
+    left: -1px;
+    bottom: -20px;
+    width: 30%;
+    height: 20%;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+#index-wrapper {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 20px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 2px;
+        width: 80%;
+        background-color: #bbb;
+        @include vendor-prefix(transform, translate(-50%, -50%) rotate(-60deg)); 
+    }
+}
+#slide-info h5, #slide-info h2 {
+    margin: 0;
+}
+#slide-info h5 > * {
+    font-family: 'brandon text' !important;
+    color: #bbb;
+}
+#slide-info h2 {
+    font-size: 26px;
+    font-weight: 200;
+}
+#slide-info h5 span {
+    position: absolute;
+}
+#slide-info #index-total {
+   @include vendor-prefix(transform, translate(20px, 16px)); 
+}
+#gallery-next, #gallery-prev {
+    position: absolute;
+    top: 50%;
+    height: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #aaaaaa;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      left: 50%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #000;
+      visibility: hidden;
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+      z-index: 1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #eeeeee;
+    }
+
+    &:hover {
+        color: #000000;
+        &:before {
+            visibility: visible;
+            width: 100%;
+        }        
+    }
+
+
+}
+#gallery-next {
+    right: -71px;
+    -webkit-transform: translate(0, -50%) rotate(90deg);
+    -moz-transform: translate(0, -50%) rotate(90deg);
+    -ms-transform: translate(0, -50%) rotate(90deg);
+    -o-transform: translate(0, -50%) rotate(90deg);
+    transform: translate(0, -50%) rotate(90deg);
+}
+#gallery-prev {
+    left: -71px;
+    -webkit-transform: translate(0, -50%) rotate(-90deg);
+    -moz-transform: translate(0, -50%) rotate(-90deg);
+    -ms-transform: translate(0, -50%) rotate(-90deg);
+    -o-transform: translate(0, -50%) rotate(-90deg);
+    transform: translate(0, -50%) rotate(-90deg);
+}
+
+#play-button {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    @include center-align;
+    cursor: pointer;
+
+    .circle {
+      stroke: #ffffff;
+      stroke-dasharray: 650;
+      stroke-dashoffset: 650;
+      -webkit-transition: all 0.5s ease-in-out;
+      opacity: 0.3;
+    }
+    .triangle {
+        -webkit-transition: all 0.7s ease-in-out;
+        stroke-dasharray: 240;
+        stroke-dashoffset: 480;
+        stroke: #ffffff;
+        transform: translateY(0) 
+    }
+    &:hover {
+        .triangle {
+          stroke-dashoffset: 0;
+          opacity: 1;
+          stroke: #ffffff;
+        }
+        .circle {
+          stroke-dashoffset: 0;
+          opacity: 1;
+        }
+    }
+
+}
+#video-player-wrap {
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 103;
+}
+.youtube-video{
+    position: absolute;
+    width: 81%;
+    height: 72%;
+    @include center-align;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>> ---- GALLERY END---- <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
@@ -711,8 +911,11 @@ p {
     font-weight: 600;
     margin-right: 1em;
 }
-#price-list .currency {
+#price-list {
     font-size: 0.6em;
+}
+.currency {
+    font-size: 0.8em;
 }
 #contact-detail-row {
     margin-bottom: 30px;
@@ -803,6 +1006,13 @@ p {
         padding-top: 15vh;
         padding-left: 0px;
     }
+    #gallery-wrap {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 50px);       
+    }
     #intro-top-row {
         padding-left: 0%;
     }
@@ -863,7 +1073,7 @@ p {
         padding-right: 6.530214426%;
     }
 }
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 768px) {
 
     #header-logo {
         right: auto;
@@ -977,7 +1187,7 @@ p {
         padding-left: 6.530214426%;
         padding-right: 6.530214426%;
     }
-}
+}*/
 @media only screen and (max-width: 600px) {
  #booking-info {
     width: 100%;

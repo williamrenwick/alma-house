@@ -10,6 +10,7 @@ var PageTitle = React.createClass({
         windowW: ['resize', 'currentWidth'],
         isInIntro: ['routes', 'isInIntro'],
         isInHouse: ['routes', 'isInHouse'],
+        isInGallery: ['routes', 'isInGallery'],
         isInBooking: ['routes', 'isInBooking']
     },
 
@@ -20,7 +21,9 @@ var PageTitle = React.createClass({
     getPageTitle: function() {
 
         if (this.state.isInHouse) {
-            return 'The House & Area';
+            return 'The House & Area'
+        } else if (this.state.isInGallery) {
+            return 'Gallery & Video'
         } else if (this.state.isInBooking) {
             return 'Booking & Contact'
         }
@@ -28,15 +31,22 @@ var PageTitle = React.createClass({
     getSideTitleStyle: function() {
         var style = {
             visibility: null,
-            color: null
+            color: null,
+            zIndex: null,
         }
 
         if (this.state.isInHouse) {
             style.visibility = 'visible';
             style.color = '#769ac4';
+            style.zIndex = '11';
+        } else if (this.state.isInGallery) {
+            style.visibility = 'visible';
+            style.color = '#CADFFE';
+            style.zIndex = '-1';
         } else if (this.state.isInBooking) {
             style.visibility = 'visible';
             style.color = '#bec6cf';
+            style.zIndex = '11';
         }
 
         return style
@@ -48,6 +58,8 @@ var PageTitle = React.createClass({
 
         if (this.state.isInHouse) {
             style.backgroundColor = '#769ac4';
+        } else if (this.state.isInGallery) {
+            style.backgroundColor = '#CADFFE';
         } else if (this.state.isInBooking) {
             style.backgroundColor = '#bec6cf';
         }

@@ -418,7 +418,7 @@ p {
 }
 
 /* line 384, preprocessor/main.scss */
-#house-wrap, #booking-wrap {
+#house-wrap, #booking-wrap, #gallery-wrap {
   position: absolute;
   left: 50px;
   width: calc(100% - 50px);
@@ -435,13 +435,28 @@ p {
 #header-image {
   width: 100%;
   height: 100vh;
-  background-color: #9ddbdc;
+  background-color: rgba(157, 219, 220, 0.81);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 /* line 409, preprocessor/main.scss */
+#intro-vid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+
+/* line 422, preprocessor/main.scss */
 #header-logo {
   position: absolute;
   right: 30%;
@@ -459,7 +474,7 @@ p {
   transform: translate(0, -50%);
 }
 
-/* line 428, preprocessor/main.scss */
+/* line 441, preprocessor/main.scss */
 #intro-img-1 {
   width: 100%;
   position: relative;
@@ -480,7 +495,7 @@ p {
   bottom: 0;
 }
 
-/* line 432, preprocessor/main.scss */
+/* line 445, preprocessor/main.scss */
 #intro-img-2 {
   float: right;
   width: 47%;
@@ -503,7 +518,7 @@ p {
   bottom: 0;
 }
 
-/* line 438, preprocessor/main.scss */
+/* line 451, preprocessor/main.scss */
 #intro-img-3 {
   width: 62.573099415%;
   margin-right: 3.39%;
@@ -525,7 +540,7 @@ p {
   bottom: 0;
 }
 
-/* line 443, preprocessor/main.scss */
+/* line 456, preprocessor/main.scss */
 #intro-img-4 {
   width: 34.03%;
   position: relative;
@@ -546,7 +561,7 @@ p {
   bottom: 0;
 }
 
-/* line 447, preprocessor/main.scss */
+/* line 460, preprocessor/main.scss */
 #bed-img-1 {
   width: 43.8596491%;
   position: relative;
@@ -567,7 +582,7 @@ p {
   bottom: 0;
 }
 
-/* line 451, preprocessor/main.scss */
+/* line 464, preprocessor/main.scss */
 #bed-img-2, #bed-img-3, #bed-img-4 {
   width: 28.0701754%;
   position: relative;
@@ -588,12 +603,12 @@ p {
   bottom: 0;
 }
 
-/* line 455, preprocessor/main.scss */
+/* line 468, preprocessor/main.scss */
 #bed-img-2, #bed-img-3 {
   margin-right: 7.8947369%;
 }
 
-/* line 458, preprocessor/main.scss */
+/* line 471, preprocessor/main.scss */
 #outside-img-1 {
   width: 53.216374269%;
   position: relative;
@@ -614,7 +629,7 @@ p {
   bottom: 0;
 }
 
-/* line 462, preprocessor/main.scss */
+/* line 475, preprocessor/main.scss */
 #relaxation-img-1 {
   width: 43.85%;
   position: relative;
@@ -635,28 +650,28 @@ p {
   bottom: 0;
 }
 
-/* line 466, preprocessor/main.scss */
+/* line 479, preprocessor/main.scss */
 .content {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* line 470, preprocessor/main.scss */
+/* line 483, preprocessor/main.scss */
 #intro-inner-wrap, #bedroom-inner-wrap, #outside, #relaxation, #extraInfo {
   width: 100%;
   padding-left: 6.530214426%;
   padding-right: 50px;
 }
 
-/* line 475, preprocessor/main.scss */
+/* line 488, preprocessor/main.scss */
 #intro-top-row {
   position: relative;
   padding-left: 6.432748538%;
   margin-bottom: 3.39%;
 }
 
-/* line 480, preprocessor/main.scss */
+/* line 493, preprocessor/main.scss */
 #intro-text {
   width: 49.6410579%;
   padding: 20px;
@@ -669,38 +684,38 @@ p {
   transform: translateY(-38px);
 }
 
-/* line 487, preprocessor/main.scss */
+/* line 500, preprocessor/main.scss */
 #house-content-wrap h1 {
   font-weight: 500;
   font-size: 18px;
   margin: 0 0 2em 0;
 }
 
-/* line 492, preprocessor/main.scss */
+/* line 505, preprocessor/main.scss */
 #bedRow1 {
   margin-top: 100px;
 }
 
-/* line 495, preprocessor/main.scss */
+/* line 508, preprocessor/main.scss */
 #bedRow2 {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-/* line 499, preprocessor/main.scss */
+/* line 512, preprocessor/main.scss */
 #bedText {
   width: 32.86%;
   margin-left: 12.2807018%;
   margin-top: 2em;
 }
 
-/* line 504, preprocessor/main.scss */
+/* line 517, preprocessor/main.scss */
 #outside {
   position: relative;
   margin-bottom: 50px;
 }
 
-/* line 508, preprocessor/main.scss */
+/* line 521, preprocessor/main.scss */
 #outsideText {
   position: relative;
   width: 34.502924%;
@@ -708,35 +723,35 @@ p {
   margin-right: 2.923976608%;
 }
 
-/* line 514, preprocessor/main.scss */
+/* line 527, preprocessor/main.scss */
 #relaxationText {
   width: 34.502923976%;
   margin-left: 12.280701754%;
   margin-right: 9.35673%;
 }
 
-/* line 519, preprocessor/main.scss */
+/* line 532, preprocessor/main.scss */
 #extraInfo {
   margin-bottom: 160px;
 }
 
-/* line 522, preprocessor/main.scss */
+/* line 535, preprocessor/main.scss */
 .extraRow {
   margin-top: 50px;
 }
 
-/* line 525, preprocessor/main.scss */
+/* line 538, preprocessor/main.scss */
 #extraRow1 li {
   margin-bottom: 0.3em;
 }
 
-/* line 528, preprocessor/main.scss */
+/* line 541, preprocessor/main.scss */
 #extraRow1 span {
   display: inline-block;
   margin-right: 0.6em;
 }
 
-/* line 532, preprocessor/main.scss */
+/* line 545, preprocessor/main.scss */
 #extraRow2 li {
   position: relative;
   display: inline;
@@ -745,18 +760,18 @@ p {
   line-height: 2.8em;
 }
 
-/* line 539, preprocessor/main.scss */
+/* line 552, preprocessor/main.scss */
 #extraRow2 span {
   display: inline-block;
 }
 
-/* line 542, preprocessor/main.scss */
+/* line 555, preprocessor/main.scss */
 .extra-col {
   padding-top: 1em;
   border-top: 2px solid #cadffe;
 }
 
-/* line 546, preprocessor/main.scss */
+/* line 559, preprocessor/main.scss */
 #extraInfo ul, #extraInfo li {
   list-style: none;
   padding: 0;
@@ -764,42 +779,52 @@ p {
   font-size: 15px;
 }
 
-/* line 552, preprocessor/main.scss */
+/* line 565, preprocessor/main.scss */
+#the-cottage ul {
+  margin-top: 50px;
+}
+
+/* line 568, preprocessor/main.scss */
+#the-cottage li {
+  margin-bottom: 0.7em;
+}
+
+/* line 571, preprocessor/main.scss */
 #extraInfo .list-bold {
   font-weight: 600;
 }
 
-/* line 555, preprocessor/main.scss */
+/* line 574, preprocessor/main.scss */
 #the-cottage, #amenities {
   width: 53.118908382%;
   margin-right: 2.923976608%;
 }
 
-/* line 559, preprocessor/main.scss */
+/* line 578, preprocessor/main.scss */
 #usefulLinks {
   width: 43.859649122%;
 }
 
-/* line 562, preprocessor/main.scss */
+/* line 581, preprocessor/main.scss */
 #usefulLinks ul {
   float: left;
   width: 36%;
   margin-right: 6.6%;
 }
 
-/* line 567, preprocessor/main.scss */
+/* line 586, preprocessor/main.scss */
 #usefulLinks li.title {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
 }
 
-/* line 572, preprocessor/main.scss */
+/* line 591, preprocessor/main.scss */
 #usefulLinks li.link {
   text-decoration: underline;
 }
 
-/* line 575, preprocessor/main.scss */
+/* line 594, preprocessor/main.scss */
 .amenities-icon {
   position: absolute;
   width: 30px;
@@ -815,22 +840,257 @@ p {
   transform: translate(0, -50%);
 }
 
-/* line 583, preprocessor/main.scss */
+/* line 602, preprocessor/main.scss */
 .amenities-text {
   margin-left: 40px;
 }
 
-/* line 595, preprocessor/main.scss */
+/* line 611, preprocessor/main.scss */
+#gallery-wrap {
+  height: 100%;
+  padding: 0;
+}
+
+/* line 615, preprocessor/main.scss */
+#gallery-slideshow {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 621, preprocessor/main.scss */
+#gallery-slide {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 627, preprocessor/main.scss */
+#slide-info {
+  position: absolute;
+  left: -1px;
+  bottom: -20px;
+  width: 30%;
+  height: 20%;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/* line 637, preprocessor/main.scss */
+#index-wrapper {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 20px;
+}
+/* line 643, preprocessor/main.scss */
+#index-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  width: 80%;
+  background-color: #bbb;
+  -webkit-transform: translate(-50%, -50%) rotate(-60deg);
+  -ms-transform: translate(-50%, -50%) rotate(-60deg);
+  -moz-transform: translate(-50%, -50%) rotate(-60deg);
+  -o-transform: translate(-50%, -50%) rotate(-60deg);
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+/* line 654, preprocessor/main.scss */
+#slide-info h5, #slide-info h2 {
+  margin: 0;
+}
+
+/* line 657, preprocessor/main.scss */
+#slide-info h5 > * {
+  font-family: 'brandon text' !important;
+  color: #bbb;
+}
+
+/* line 661, preprocessor/main.scss */
+#slide-info h2 {
+  font-size: 26px;
+  font-weight: 200;
+}
+
+/* line 665, preprocessor/main.scss */
+#slide-info h5 span {
+  position: absolute;
+}
+
+/* line 668, preprocessor/main.scss */
+#slide-info #index-total {
+  -webkit-transform: translate(20px, 16px);
+  -ms-transform: translate(20px, 16px);
+  -moz-transform: translate(20px, 16px);
+  -o-transform: translate(20px, 16px);
+  transform: translate(20px, 16px);
+}
+
+/* line 671, preprocessor/main.scss */
+#gallery-next, #gallery-prev {
+  position: absolute;
+  top: 50%;
+  height: 20px;
+  width: 40px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #aaaaaa;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+/* line 692, preprocessor/main.scss */
+#gallery-next:before, #gallery-prev:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 50%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 1;
+}
+/* line 706, preprocessor/main.scss */
+#gallery-next:after, #gallery-prev:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #eeeeee;
+}
+/* line 716, preprocessor/main.scss */
+#gallery-next:hover, #gallery-prev:hover {
+  color: #000000;
+}
+/* line 718, preprocessor/main.scss */
+#gallery-next:hover:before, #gallery-prev:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+/* line 726, preprocessor/main.scss */
+#gallery-next {
+  right: -71px;
+  -webkit-transform: translate(0, -50%) rotate(90deg);
+  -moz-transform: translate(0, -50%) rotate(90deg);
+  -ms-transform: translate(0, -50%) rotate(90deg);
+  -o-transform: translate(0, -50%) rotate(90deg);
+  transform: translate(0, -50%) rotate(90deg);
+}
+
+/* line 734, preprocessor/main.scss */
+#gallery-prev {
+  left: -71px;
+  -webkit-transform: translate(0, -50%) rotate(-90deg);
+  -moz-transform: translate(0, -50%) rotate(-90deg);
+  -ms-transform: translate(0, -50%) rotate(-90deg);
+  -o-transform: translate(0, -50%) rotate(-90deg);
+  transform: translate(0, -50%) rotate(-90deg);
+}
+
+/* line 743, preprocessor/main.scss */
+#play-button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+/* line 750, preprocessor/main.scss */
+#play-button .circle {
+  stroke: #ffffff;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+/* line 757, preprocessor/main.scss */
+#play-button .triangle {
+  -webkit-transition: all 0.7s ease-in-out;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: #ffffff;
+  transform: translateY(0);
+}
+/* line 765, preprocessor/main.scss */
+#play-button:hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #ffffff;
+}
+/* line 770, preprocessor/main.scss */
+#play-button:hover .circle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+/* line 777, preprocessor/main.scss */
+#video-player-wrap {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 103;
+}
+
+/* line 783, preprocessor/main.scss */
+.youtube-video {
+  position: absolute;
+  width: 81%;
+  height: 72%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 795, preprocessor/main.scss */
 #booking-wrap {
   padding-top: 200px;
 }
 
-/* line 598, preprocessor/main.scss */
+/* line 798, preprocessor/main.scss */
 #booking {
   margin-bottom: 60px;
 }
 
-/* line 601, preprocessor/main.scss */
+/* line 801, preprocessor/main.scss */
 #booking-contact-buttons {
   position: fixed;
   float: left;
@@ -838,13 +1098,13 @@ p {
   margin-left: 11.590524534%;
 }
 
-/* line 607, preprocessor/main.scss */
+/* line 807, preprocessor/main.scss */
 #booking-contact-buttons ul {
   list-style: none;
   line-height: 1.2em;
 }
 
-/* line 611, preprocessor/main.scss */
+/* line 811, preprocessor/main.scss */
 #booking-contact-buttons li {
   position: relative;
   font-size: 10px;
@@ -854,12 +1114,12 @@ p {
   cursor: pointer;
 }
 
-/* line 619, preprocessor/main.scss */
+/* line 819, preprocessor/main.scss */
 #booking-contact-buttons li.active {
   color: #3a3939;
   margin-left: 30px;
 }
-/* line 623, preprocessor/main.scss */
+/* line 823, preprocessor/main.scss */
 #booking-contact-buttons li.active:after {
   position: absolute;
   content: '';
@@ -875,28 +1135,28 @@ p {
   transform: translate(0, -50%);
 }
 
-/* line 633, preprocessor/main.scss */
+/* line 833, preprocessor/main.scss */
 #content-wrapper {
   float: left;
   margin-left: 34.26395939%;
   width: 59.221658206%;
 }
 
-/* line 639, preprocessor/main.scss */
+/* line 839, preprocessor/main.scss */
 #bookingRow1,
 #contactRow1 {
   margin-bottom: 50px;
   border-top: 2px solid #b6bfc9;
 }
 
-/* line 643, preprocessor/main.scss */
+/* line 843, preprocessor/main.scss */
 #bookingRow1 h1, #contactRow1 h1 {
   font-weight: 500;
   font-size: 18px;
   margin: 0.6em 0 2em 0;
 }
 
-/* line 649, preprocessor/main.scss */
+/* line 849, preprocessor/main.scss */
 #bookingRow2 h1,
 #contact-detail-row h1 {
   font-weight: 600;
@@ -905,31 +1165,31 @@ p {
   text-transform: uppercase;
 }
 
-/* line 655, preprocessor/main.scss */
+/* line 855, preprocessor/main.scss */
 #bookingRow2 h1 span {
   padding-top: 8px;
   border-top: 2px solid #b6bfc9;
 }
 
-/* line 659, preprocessor/main.scss */
+/* line 859, preprocessor/main.scss */
 #contact-detail-row h1 span {
   padding-bottom: 8px;
   border-bottom: 2px solid #b6bfc9;
 }
 
-/* line 663, preprocessor/main.scss */
+/* line 863, preprocessor/main.scss */
 #booking-info {
   width: 63.714285714%;
 }
 
-/* line 666, preprocessor/main.scss */
+/* line 866, preprocessor/main.scss */
 #booking-download {
   position: relative;
   width: 27.428571428%;
   margin: 0 3.142857142% 0 5.714285714%;
 }
 
-/* line 671, preprocessor/main.scss */
+/* line 871, preprocessor/main.scss */
 #download-innerwrap {
   position: absolute;
   width: 100%;
@@ -942,7 +1202,7 @@ p {
   transform: translate(-50%, -50%);
 }
 
-/* line 676, preprocessor/main.scss */
+/* line 876, preprocessor/main.scss */
 #booking-download h1 {
   margin-top: 0;
   font-size: 16px;
@@ -952,7 +1212,7 @@ p {
   letter-spacing: 0.1em;
 }
 
-/* line 684, preprocessor/main.scss */
+/* line 884, preprocessor/main.scss */
 #download-button {
   position: relative;
   margin: 0 auto;
@@ -966,18 +1226,18 @@ p {
   cursor: pointer;
 }
 
-/* line 696, preprocessor/main.scss */
+/* line 896, preprocessor/main.scss */
 #price-list {
   padding: 0;
   list-style: none;
 }
 
-/* line 700, preprocessor/main.scss */
+/* line 900, preprocessor/main.scss */
 #price-list span {
   display: inline-block;
 }
 
-/* line 703, preprocessor/main.scss */
+/* line 903, preprocessor/main.scss */
 #price-list li {
   width: 50%;
   float: left;
@@ -985,41 +1245,46 @@ p {
   margin-bottom: 1.6em;
 }
 
-/* line 709, preprocessor/main.scss */
+/* line 909, preprocessor/main.scss */
 #price-list .prices {
   font-size: 21px;
   font-weight: 600;
   margin-right: 1em;
 }
 
-/* line 714, preprocessor/main.scss */
-#price-list .currency {
+/* line 914, preprocessor/main.scss */
+#price-list {
   font-size: 0.6em;
 }
 
-/* line 717, preprocessor/main.scss */
+/* line 917, preprocessor/main.scss */
+.currency {
+  font-size: 0.8em;
+}
+
+/* line 920, preprocessor/main.scss */
 #contact-detail-row {
   margin-bottom: 30px;
 }
 
-/* line 720, preprocessor/main.scss */
+/* line 923, preprocessor/main.scss */
 #address {
   margin-right: 20%;
 }
 
-/* line 723, preprocessor/main.scss */
+/* line 926, preprocessor/main.scss */
 #contact-detail-row h2 {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-/* line 727, preprocessor/main.scss */
+/* line 930, preprocessor/main.scss */
 #contact-detail-row p {
   margin-top: 29px;
   line-height: 1em;
 }
 
-/* line 731, preprocessor/main.scss */
+/* line 934, preprocessor/main.scss */
 #map-wrap {
   display: block;
   position: relative;
@@ -1027,7 +1292,7 @@ p {
   padding-bottom: 75%;
 }
 
-/* line 737, preprocessor/main.scss */
+/* line 940, preprocessor/main.scss */
 #map-content {
   position: absolute;
   top: 0;
@@ -1040,343 +1305,179 @@ p {
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 768px) {
-  /* line 753, preprocessor/main.scss */
-  #header-logo {
-    right: auto;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-  /* line 757, preprocessor/main.scss */
-  #main-content-logo {
-    top: 17px;
-    right: 10%;
-    width: 140px;
-    height: 17px;
-    z-index: 102;
-    background-image: url(../public/img/logo-white.png);
-  }
-
-  /* line 766, preprocessor/main.scss */
-  #next-page {
-    position: fixed;
-    top: 60px;
-    left: auto;
-    right: 20px;
-    bottom: 0;
-    width: 20px;
-    height: 12px;
-    margin-top: 0.67em;
-    cursor: pointer;
-  }
-
-  /* line 777, preprocessor/main.scss */
-  #next-page-arrow {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url(../public/img/arrow-grey-right.png);
-  }
-
-  /* line 784, preprocessor/main.scss */
-  #side-page-title {
-    position: fixed;
-    top: 60px;
-    text-align: center;
-    text-transform: uppercase;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -moz-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-
-  /* line 791, preprocessor/main.scss */
-  #side-page-title h1 {
-    font-family: 'brown';
-    font-size: 12px;
-  }
-
-  /* line 795, preprocessor/main.scss */
-  #page-title-line {
-    top: 100%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -moz-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-
-  /* line 799, preprocessor/main.scss */
-  #house-wrap, #booking-wrap {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding-top: 15vh;
-    padding-left: 0px;
-  }
-
-  /* line 806, preprocessor/main.scss */
-  #intro-top-row {
-    padding-left: 0%;
-  }
-
-  /* line 809, preprocessor/main.scss */
-  #intro-text {
-    width: 100%;
-    padding: 20px;
-    margin-right: 0%;
-  }
-
-  /* line 814, preprocessor/main.scss */
-  #intro-img-2 {
-    float: left;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  /* line 819, preprocessor/main.scss */
-  #bedRow1 {
-    margin-top: 20px;
-  }
-
-  /* line 822, preprocessor/main.scss */
-  #bedText {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-top: 2em;
-  }
-
-  /* line 828, preprocessor/main.scss */
-  #bed-img-1 {
-    float: left;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  /* line 833, preprocessor/main.scss */
-  #outsideText, #relaxationText {
-    width: 100%;
-    margin: 0 0 20px 0;
-  }
-
-  /* line 837, preprocessor/main.scss */
-  #outside-img-1, #relaxation-img-1 {
-    width: 100%;
-    position: relative;
-  }
-
-  /* line 841, preprocessor/main.scss */
-  .extraRow {
-    margin-top: 20px;
-  }
-
-  /* line 844, preprocessor/main.scss */
-  #the-cottage {
-    margin-top: 30px;
-  }
-
-  /* line 847, preprocessor/main.scss */
-  #the-cottage, #amenities {
-    width: 100%;
-    margin-right: 0%;
-  }
-
-  /* line 851, preprocessor/main.scss */
-  #usefulLinks {
-    margin-top: 20px;
-    width: 100%;
-  }
-
-  /* line 855, preprocessor/main.scss */
-  #booking-wrap {
-    padding-top: 12vh;
-  }
-
-  /* line 858, preprocessor/main.scss */
-  #content-wrapper {
-    float: left;
-    margin-left: 0;
-    width: 100%;
-    padding-left: 6.530214426%;
-    padding-right: 6.530214426%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  /* line 868, preprocessor/main.scss */
-  #header-logo {
-    right: auto;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-  /* line 872, preprocessor/main.scss */
-  #main-content-logo {
-    top: 17px;
-    right: 10%;
-    width: 140px;
-    height: 17px;
-    z-index: 102;
-    background-image: url(../public/img/logo-white.png);
-  }
-
-  /* line 881, preprocessor/main.scss */
-  #next-page {
-    position: fixed;
-    top: 60px;
-    left: auto;
-    right: 20px;
-    bottom: 0;
-    width: 20px;
-    height: 12px;
-    margin-top: 0.67em;
-    cursor: pointer;
-  }
-
-  /* line 892, preprocessor/main.scss */
-  #next-page-arrow {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url(../public/img/arrow-grey-right.png);
-  }
-
-  /* line 899, preprocessor/main.scss */
-  #side-page-title {
-    position: fixed;
-    top: 60px;
-    text-align: center;
-    text-transform: uppercase;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -moz-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-
-  /* line 906, preprocessor/main.scss */
-  #side-page-title h1 {
-    font-family: 'brown';
-    font-size: 12px;
-  }
-
-  /* line 910, preprocessor/main.scss */
-  #page-title-line {
-    top: 100%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -moz-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-
-  /* line 914, preprocessor/main.scss */
-  #house-wrap, #booking-wrap {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding-top: 15vh;
-    padding-left: 0px;
-  }
-
-  /* line 921, preprocessor/main.scss */
-  #intro-top-row {
-    padding-left: 0%;
-  }
-
-  /* line 924, preprocessor/main.scss */
-  #intro-text {
-    width: 100%;
-    padding: 20px;
-    margin-right: 0%;
-  }
-
-  /* line 929, preprocessor/main.scss */
-  #intro-img-2 {
-    float: left;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  /* line 934, preprocessor/main.scss */
-  #bedRow1 {
-    margin-top: 20px;
-  }
-
-  /* line 937, preprocessor/main.scss */
-  #bedText {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-top: 2em;
-  }
-
-  /* line 943, preprocessor/main.scss */
-  #bed-img-1 {
-    float: left;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  /* line 948, preprocessor/main.scss */
-  #outsideText, #relaxationText {
-    width: 100%;
-    margin: 0 0 20px 0;
-  }
-
-  /* line 952, preprocessor/main.scss */
-  #outside-img-1, #relaxation-img-1 {
-    width: 100%;
-    position: relative;
-  }
-
   /* line 956, preprocessor/main.scss */
+  #header-logo {
+    right: auto;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  /* line 960, preprocessor/main.scss */
+  #main-content-logo {
+    top: 17px;
+    right: 10%;
+    width: 140px;
+    height: 17px;
+    z-index: 102;
+    background-image: url(../public/img/logo-white.png);
+  }
+
+  /* line 969, preprocessor/main.scss */
+  #next-page {
+    position: fixed;
+    top: 60px;
+    left: auto;
+    right: 20px;
+    bottom: 0;
+    width: 20px;
+    height: 12px;
+    margin-top: 0.67em;
+    cursor: pointer;
+  }
+
+  /* line 980, preprocessor/main.scss */
+  #next-page-arrow {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../public/img/arrow-grey-right.png);
+  }
+
+  /* line 987, preprocessor/main.scss */
+  #side-page-title {
+    position: fixed;
+    top: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+
+  /* line 994, preprocessor/main.scss */
+  #side-page-title h1 {
+    font-family: 'brown';
+    font-size: 12px;
+  }
+
+  /* line 998, preprocessor/main.scss */
+  #page-title-line {
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+
+  /* line 1002, preprocessor/main.scss */
+  #house-wrap, #booking-wrap {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding-top: 15vh;
+    padding-left: 0px;
+  }
+
+  /* line 1009, preprocessor/main.scss */
+  #gallery-wrap {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+  }
+
+  /* line 1016, preprocessor/main.scss */
+  #intro-top-row {
+    padding-left: 0%;
+  }
+
+  /* line 1019, preprocessor/main.scss */
+  #intro-text {
+    width: 100%;
+    padding: 20px;
+    margin-right: 0%;
+  }
+
+  /* line 1024, preprocessor/main.scss */
+  #intro-img-2 {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* line 1029, preprocessor/main.scss */
+  #bedRow1 {
+    margin-top: 20px;
+  }
+
+  /* line 1032, preprocessor/main.scss */
+  #bedText {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 2em;
+  }
+
+  /* line 1038, preprocessor/main.scss */
+  #bed-img-1 {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* line 1043, preprocessor/main.scss */
+  #outsideText, #relaxationText {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  /* line 1047, preprocessor/main.scss */
+  #outside-img-1, #relaxation-img-1 {
+    width: 100%;
+    position: relative;
+  }
+
+  /* line 1051, preprocessor/main.scss */
   .extraRow {
     margin-top: 20px;
   }
 
-  /* line 959, preprocessor/main.scss */
+  /* line 1054, preprocessor/main.scss */
   #the-cottage {
     margin-top: 30px;
   }
 
-  /* line 962, preprocessor/main.scss */
+  /* line 1057, preprocessor/main.scss */
   #the-cottage, #amenities {
     width: 100%;
     margin-right: 0%;
   }
 
-  /* line 966, preprocessor/main.scss */
+  /* line 1061, preprocessor/main.scss */
   #usefulLinks {
     margin-top: 20px;
     width: 100%;
   }
 
-  /* line 970, preprocessor/main.scss */
+  /* line 1065, preprocessor/main.scss */
   #booking-wrap {
     padding-top: 12vh;
   }
 
-  /* line 973, preprocessor/main.scss */
+  /* line 1068, preprocessor/main.scss */
   #content-wrapper {
     float: left;
     margin-left: 0;
@@ -1385,13 +1486,128 @@ p {
     padding-right: 6.530214426%;
   }
 }
+/*@media only screen and (max-width: 768px) {
+
+    #header-logo {
+        right: auto;
+        @include center-align;
+    }
+    #main-content-logo {
+        top: 17px;
+        right: 10%;
+        width: 140px;
+        height: 17px;
+        z-index: 102;
+        background-image: url(../public/img/logo-white.png);
+    }
+
+    #next-page {
+        position: fixed;
+        top: 60px;
+        left: auto;
+        right: 20px;
+        bottom: 0;
+        width: 20px;
+        height: 12px;
+        margin-top: 0.67em;
+        cursor: pointer; 
+    }
+    #next-page-arrow {
+        width: 100%;
+        height: 100%;
+        @include bg-image(center);
+        background-size: contain;
+        background-image: url(../public/img/arrow-grey-right.png);
+    }
+    #side-page-title {
+        position: fixed;
+        top: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        @include horizontal-align; 
+    }
+    #side-page-title h1 {
+        font-family: 'brown';
+        font-size: 12px;
+    }
+    #page-title-line {
+        top: 100%;
+        @include horizontal-align;
+    }
+    #house-wrap, #booking-wrap {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-top: 15vh;
+        padding-left: 0px;
+    }
+    #intro-top-row {
+        padding-left: 0%;
+    }
+    #intro-text {
+        width: 100%;
+        padding: 20px;
+        margin-right: 0%;
+    }
+    #intro-img-2 {
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+    }
+    #bedRow1 {
+        margin-top: 20px;
+    }
+    #bedText {
+        float: left;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 2em;
+    }
+    #bed-img-1 {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #outsideText, #relaxationText {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    #outside-img-1, #relaxation-img-1 {
+        width: 100%;
+        position: relative;
+    }
+    .extraRow {
+        margin-top: 20px;
+    }
+    #the-cottage {
+        margin-top: 30px;
+    }
+    #the-cottage, #amenities {
+        width: 100%;
+        margin-right: 0%;
+    }
+    #usefulLinks {
+        margin-top: 20px;
+        width: 100%;
+    }
+    #booking-wrap {
+        padding-top: 12vh;
+    }
+    #content-wrapper {
+        float: left;
+        margin-left: 0;
+        width: 100%;
+        padding-left: 6.530214426%;
+        padding-right: 6.530214426%;
+    }
+}*/
 @media only screen and (max-width: 600px) {
-  /* line 982, preprocessor/main.scss */
+  /* line 1192, preprocessor/main.scss */
   #booking-info {
     width: 100%;
   }
 
-  /* line 985, preprocessor/main.scss */
+  /* line 1195, preprocessor/main.scss */
   #booking-download {
     position: relative;
     width: 100%;
@@ -1399,7 +1615,7 @@ p {
   }
 }
 @media only screen and (max-width: 456px) {
-  /* line 992, preprocessor/main.scss */
+  /* line 1202, preprocessor/main.scss */
   #telephone {
     margin-top: 20px;
   }
@@ -1407,7 +1623,7 @@ p {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 1008, preprocessor/main.scss */
+/* line 1218, preprocessor/main.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1415,7 +1631,7 @@ p {
   *text-indent: -9999px;
 }
 
-/* line 1015, preprocessor/main.scss */
+/* line 1225, preprocessor/main.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1423,13 +1639,13 @@ p {
   height: 150%;
 }
 
-/* line 1022, preprocessor/main.scss */
+/* line 1232, preprocessor/main.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 1027, preprocessor/main.scss */
+/* line 1237, preprocessor/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1441,7 +1657,7 @@ p {
   width: 10px;
 }
 
-/* line 1039, preprocessor/main.scss */
+/* line 1249, preprocessor/main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1452,24 +1668,24 @@ p {
   width: auto;
 }
 
-/* line 1048, preprocessor/main.scss */
+/* line 1258, preprocessor/main.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 1053, preprocessor/main.scss */
+/* line 1263, preprocessor/main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 1058, preprocessor/main.scss */
+/* line 1268, preprocessor/main.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 1062, preprocessor/main.scss */
+/* line 1272, preprocessor/main.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -1478,7 +1694,7 @@ p {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 1071, preprocessor/main.scss */
+  /* line 1281, preprocessor/main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1486,48 +1702,48 @@ p {
     text-shadow: none !important;
   }
 
-  /* line 1079, preprocessor/main.scss */
+  /* line 1289, preprocessor/main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 1083, preprocessor/main.scss */
+  /* line 1293, preprocessor/main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 1087, preprocessor/main.scss */
+  /* line 1297, preprocessor/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 1093, preprocessor/main.scss */
+  /* line 1303, preprocessor/main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 1098, preprocessor/main.scss */
+  /* line 1308, preprocessor/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 1103, preprocessor/main.scss */
+  /* line 1313, preprocessor/main.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 1108, preprocessor/main.scss */
+  /* line 1318, preprocessor/main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 1112, preprocessor/main.scss */
+  /* line 1322, preprocessor/main.scss */
   img {
     max-width: 100% !important;
   }
@@ -1536,7 +1752,7 @@ p {
     margin: 0.5cm;
 }
 
-  /* line 1122, preprocessor/main.scss */
+  /* line 1332, preprocessor/main.scss */
   p,
   h2,
   h3 {
@@ -1544,7 +1760,7 @@ p {
     widows: 3;
   }
 
-  /* line 1128, preprocessor/main.scss */
+  /* line 1338, preprocessor/main.scss */
   h2,
   h3 {
     page-break-after: avoid;

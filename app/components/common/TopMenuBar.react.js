@@ -10,8 +10,10 @@ var TopMenuBar = React.createClass({
     mixins : [mixin],
     cursors: {
         windowW: ['resize', 'currentWidth'],
+        isMobile: ['resize', 'isMobile'],
         isInIntro: ['routes', 'isInIntro'],
         isInHouse: ['routes', 'isInHouse'],
+        isInGallery: ['routes', 'isInGallery'],
         isInBooking: ['routes', 'isInBooking'],
         menuIsOpen: ['menu', 'isOpen']
     },
@@ -30,14 +32,17 @@ var TopMenuBar = React.createClass({
 
     getSideBarStyle: function() {
         var style = {
+            display: null,
             height: null
         }
-
-        if (this.state.isInIntro) {
+        if (this.state.isMobile) {
+            style.display = 'block';
             style.height = '50px';
-        } else if (this.state.isInHouse) {
-            style.height = '50px';
+        } else {
+            style.display = 'none';
+            style.height = '0px';
         }
+
 
         return style
     },
@@ -59,13 +64,11 @@ var TopMenuBar = React.createClass({
             style.transform = 'translateY(-50px)';
         } else if (this.state.isInHouse) {
             style.backgroundColor = '#769ac4';
-            style.WebkitTransform = 'translateY(0px)';
-            style.MozTransform = 'translateY(0px)';
-            style.msTransform = 'translateY(0px)';
-            style.OTransform = 'translateY(0px)';
-            style.transform = 'translateY(0px)';
+        } else if (this.state.isInGallery) {
+            style.backgroundColor = '#cadffe';
         } else if (this.state.isInBooking) {
             style.backgroundColor = '#bec6cf';
+        } else if (this.state.isInHouse || this.state.isInBooking || this.state.isInGallery) {
             style.WebkitTransform = 'translateX(0px)';
             style.MozTransform = 'translateX(0px)';
             style.msTransform = 'translateX(0px)';

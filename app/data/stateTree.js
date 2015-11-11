@@ -22,7 +22,12 @@ var stateTree = new Baobab({
 	routes: {
 		isInIntro: null,
 		isInHouse: null,
+		isInGallery: null,
 		isInBooking: null
+	},
+	gallery: {
+		currentSlide: null,
+		isVideoActive: false
 	},
 	booking: {
 		bookingIsActive: true,

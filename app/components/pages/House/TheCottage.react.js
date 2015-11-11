@@ -18,10 +18,8 @@ var TheCottage = React.createClass({
                 <h1>The Cottage</h1>
                 <ul>
                     <li>Bedrooms: <span className="list-bold">3</span></li>
-                    <li>Beds: <span className="list-bold">6</span></li>
-                    <li>Bed Types: <span className="list-bold">1x Super King Size, 1x King Size, 1x Bunk Bed</span></li>
-                    <li>Sleeps: <span className="list-bold">6 (+ a cot)</span></li>
-                    <li>Sitting Room: <span className="list-bold">1</span></li>
+                    <li>Sleeps: <span className="list-bold">6/8</span></li>
+                    <li>Bed Types: <span className="list-bold">1x Super King Size, 1x King Size, 1x Bunk Bed, 1x Sofa Bed</span></li>
                     <li>Bathrooms: <span className="list-bold">2</span></li>
                 </ul>
             </div>

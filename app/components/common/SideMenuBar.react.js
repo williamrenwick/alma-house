@@ -13,6 +13,7 @@ var SideMenuBar = React.createClass({
         windowW: ['resize', 'currentWidth'],
         isInIntro: ['routes', 'isInIntro'],
         isInHouse: ['routes', 'isInHouse'],
+        isInGallery: ['routes', 'isInGallery'],
         isInBooking: ['routes', 'isInBooking'],
         menuIsOpen: ['menu', 'isOpen']
     },
@@ -34,11 +35,7 @@ var SideMenuBar = React.createClass({
             width: null
         }
 
-        if (this.state.isInIntro) {
-            style.width = '50px';
-        } else if (this.state.isInHouse || this.state.isInBooking) {
-            style.width = '50px';
-        }
+        style.width = '50px'
 
         return style
     },
@@ -60,13 +57,11 @@ var SideMenuBar = React.createClass({
             style.transform = 'translateX(-50px)';
         } else if (this.state.isInHouse) {
             style.backgroundColor = '#769ac4';
-            style.WebkitTransform = 'translateX(0px)';
-            style.MozTransform = 'translateX(0px)';
-            style.msTransform = 'translateX(0px)';
-            style.OTransform = 'translateX(0px)';
-            style.transform = 'translateX(0px)';
+        } else if (this.state.isInGallery) {
+            style.backgroundColor = '#cadffe';
         } else if (this.state.isInBooking) {
             style.backgroundColor = '#bec6cf';
+        } else if (this.state.isInHouse || this.state.isInBooking || this.state.isInGallery) {
             style.WebkitTransform = 'translateX(0px)';
             style.MozTransform = 'translateX(0px)';
             style.msTransform = 'translateX(0px)';

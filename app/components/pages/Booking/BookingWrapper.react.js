@@ -65,11 +65,11 @@ var BookingWrapper = React.createClass({
             }
             if (this.state.isDesktop) {
                 return (
-                    <li><span className="prices" style={styles}>{item.price}<span className="currency">GBP</span></span><span className="dates"><p>{item.date}</p></span></li>
+                    <li><span className="prices" style={styles}>{"£" + item.price}</span><span className="dates"><p>{item.date}</p></span></li>
                 )                
             } else {
                 return (
-                    <li><span className="prices" style={styles}>{item.price}<span className="currency">GBP</span></span><br/><span className="dates"><p>{item.date}</p></span></li>
+                    <li><span className="prices" style={styles}>{"£" + item.price}</span><br/><span className="dates"><p>{item.date}</p></span></li>
                 )                  
             }
 

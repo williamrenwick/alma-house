@@ -32,6 +32,7 @@ var SideMenuBar = React.createClass({
             <div id='menu-main-inner'>
                 <ul>
                     <li onClick={this.handleClick}><Link to="the-house"><span>The House</span></Link></li>
+                    <li onClick={this.handleClick}><Link to="gallery"><span>Gallery & Video</span></Link></li>
                     <li onClick={this.handleClick}><Link to="booking"><span>Booking & Contact</span></Link></li>
                 </ul>
             </div>

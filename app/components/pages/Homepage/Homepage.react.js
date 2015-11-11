@@ -23,7 +23,10 @@ var Homepage = React.createClass({
 
     render : function() {
         return (
-            <div id='header-image' style={{backgroundImage: 'url(img/headerImage.png)'}}>
+            <div id='header-image'>
+                <video autoPlay loop muted id="intro-vid">
+                    <source src='img/IntroResized.mp4' type="video/mp4" />
+                </video>
                 <div id='header-logo'></div>
                 <NextPage {...this.props}/>
             </div>

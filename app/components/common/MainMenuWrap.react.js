@@ -12,6 +12,7 @@ var SideMenuBar = React.createClass({
         windowW: ['resize', 'currentWidth'],
         isInIntro: ['routes', 'isInIntro'],
         isInHouse: ['routes', 'isInHouse'],
+        isInGallery: ['routes', 'isInGallery'],
         isInBooking: ['routes', 'isInBooking'],
         menuIsOpen: ['menu', 'isOpen']
     },
@@ -32,9 +33,11 @@ var SideMenuBar = React.createClass({
         }
 
         if (this.state.isInIntro) {
-            style.backgroundColor = 'transparent';
+            style.backgroundColor = '#9ddbdc';
         } else if (this.state.isInHouse) {
             style.backgroundColor = '#769ac4';
+        } else if (this.state.isInGallery) {
+            style.backgroundColor = '#cadffe'
         } else if (this.state.isInBooking) {
             style.backgroundColor = '#bec6cf';
         }

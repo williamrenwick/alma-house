@@ -7,7 +7,7 @@ var priceListItem = [
         date: '13th Feb - 20th Feb'        
     }, {
         price: 400,
-        date: '20th Feb – 19th Mar'        
+        date: '20th Feb – 26th Mar'        
     }, {
         price: 625,
         date: '26th Mar – 16th Apr'        
