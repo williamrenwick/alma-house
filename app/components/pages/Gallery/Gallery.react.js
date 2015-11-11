@@ -62,13 +62,13 @@ var Gallery = React.createClass({
             )
         } else if (this.state.isVideoActive && !this.state.isMobile) {
             return (
-                <div id='gallery-wrap'>
+                <div id='gallery-wrap' className="videoPlaying">
                     <VideoPlayer />
                 </div>
             )
         } else if (this.state.isVideoActive && this.state.isMobile) {
             return (
-                <div id='gallery-wrap'>
+                <div id='gallery-wrap' className="videoPlaying">
                     <div id="main-content-logo" style={this.getLogoStyle()}></div>
                     <PageTitle />
                     <VideoPlayer />

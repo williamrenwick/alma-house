@@ -212,24 +212,6 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     background-color: #f7f7f5;
     z-index: 100;
 }
-#desktop-menu-bar.scrolled {
-    position: fixed;
-    height: 61px;
-    @include vendor-prefix(transition, all 0.1s); 
-
-    & #desktop-menu-row-1 {
-        height: 0;
-    }
-
-    & #desktop-menu-row-3 {
-        margin-top: 10px;
-    }
-
-    & #desktop-menu-bar-logo {
-        opacity: 0;
-        @include vendor-prefix(transform, translateY(-20px));
-     }
-}
 #desktop-menu-row-1 {
     width: 100%;
     height: 60px;
@@ -238,7 +220,6 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     @include vendor-prefix(transition, all 0.2s);
 }
 #desktop-menu-row-3 {
-    //bottom: 0;
     margin-top: 50px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
@@ -255,9 +236,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     transition: opacity 0.1s, transform 0.2s;
     opacity: 1;
 }
-#desktop-menu-bar.scrolled #desktop-menu-bar-logo {
 
-}
 #desktop-menu {
     width: 40%;
     min-width: 500px;
@@ -329,6 +308,29 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
 }
 #desktop-menu li:nth-of-type(3):hover {
     color: #EFC38D;
+}
+#desktop-menu-bar.scrolled {
+    position: fixed;
+    height: 61px;
+    @include vendor-prefix(transition, all 0.1s); 
+
+    & #desktop-menu-row-1 {
+        height: 0;
+    }
+
+    & #desktop-menu-row-3 {
+        margin-top: 10px;
+    }
+
+    & #desktop-menu-bar-logo {
+        opacity: 0;
+        @include vendor-prefix(transform, translateY(-20px));
+     }
+}
+#desktop-menu-bar.dark {
+    background-color: #171717;
+    color: #f7f7f5;
+    border-bottom: 1px solid rgba(0,0,0,0.9);
 }
 #sub-menu-bg {
     position: fixed;
@@ -747,8 +749,12 @@ p {
 ////////////////////////////// ---- GALLERY ---- //////////////////////////////
 
 #gallery-wrap {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 136px);
     padding: 0;
+
+    &.videoPlaying {
+        height: 100vh;
+    }
 }
 #gallery-slideshow {
     position: absolute;
