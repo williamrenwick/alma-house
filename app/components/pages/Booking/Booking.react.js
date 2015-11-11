@@ -18,7 +18,8 @@ var Booking = React.createClass({
         isInIntro: ['routes', 'isInIntro'],
         isInHouse: ['routes', 'isInHouse'],
         isInBooking: ['routes', 'isInBooking'],
-        menuIsOpen: ['menu', 'isOpen']
+        menuIsOpen: ['menu', 'isOpen'],
+        scrollPos: ['scrolling', 'scrollPosition']
     },
 
     componentWillMount : function() {
@@ -27,7 +28,7 @@ var Booking = React.createClass({
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
 
-    getStyle: function() {
+    getLogoStyle: function() {
         var style = {
             opacity: null
         }
@@ -40,20 +41,32 @@ var Booking = React.createClass({
 
         return style
     },
+    getWrapStyle: function() {
+        var style = {
+           paddingTop: null
+        }
+
+        if (this.state.scrollPos > 0) {
+            style.paddingTop = 60 + 136 + 'px';
+        } else {
+            style.paddingTop = 60;
+        }
+
+        return style
+    },
+
     render : function() {
         if (!this.state.isMobile) {
             return (
-                <div id='booking-wrap'>
-                    <div id="main-content-logo"></div>
+                <div id='booking-wrap' style={this.getWrapStyle()}>
                     <BookingOrContact />
                     <ContentWrapper />
-                    <PageTitle />
                 </div>
             )
         } else {
             return (
                 <div id='booking-wrap'>
-                    <div id="main-content-logo"></div>
+                    <div id="main-content-logo" style={this.getLogoStyle()}></div>
                     <div id="sub-menu-bg"></div>
                     <BookingOrContact />
                     <ContentWrapper />

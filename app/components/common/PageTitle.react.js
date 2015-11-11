@@ -8,6 +8,7 @@ var PageTitle = React.createClass({
     mixins : [mixin],
     cursors: {
         windowW: ['resize', 'currentWidth'],
+        isMobile: ['resize', 'isMobile'],
         isInIntro: ['routes', 'isInIntro'],
         isInHouse: ['routes', 'isInHouse'],
         isInGallery: ['routes', 'isInGallery'],
@@ -21,7 +22,7 @@ var PageTitle = React.createClass({
     getPageTitle: function() {
 
         if (this.state.isInHouse) {
-            return 'The House & Area'
+            return 'The House'
         } else if (this.state.isInGallery) {
             return 'Gallery & Video'
         } else if (this.state.isInBooking) {
@@ -35,19 +36,25 @@ var PageTitle = React.createClass({
             zIndex: null,
         }
 
-        if (this.state.isInHouse) {
-            style.visibility = 'visible';
-            style.color = '#769ac4';
-            style.zIndex = '11';
-        } else if (this.state.isInGallery) {
-            style.visibility = 'visible';
-            style.color = '#CADFFE';
+        if (!this.state.isMobile) {
+            style.visibility = 'hidden';
+            style.color = '#ffffff';
             style.zIndex = '-1';
-        } else if (this.state.isInBooking) {
+        } else {
             style.visibility = 'visible';
-            style.color = '#bec6cf';
             style.zIndex = '11';
+            
+            if (this.state.isInHouse) {
+                style.color = '#A6E8D2';
+            } else if (this.state.isInGallery) {
+                style.color = '#CADFFE';
+            } else if (this.state.isInBooking) {
+                style.color = '#EFC38D';
+            }
+
         }
+
+
 
         return style
     },
@@ -57,11 +64,11 @@ var PageTitle = React.createClass({
         }
 
         if (this.state.isInHouse) {
-            style.backgroundColor = '#769ac4';
+            style.backgroundColor = '#A6E8D2';
         } else if (this.state.isInGallery) {
             style.backgroundColor = '#CADFFE';
         } else if (this.state.isInBooking) {
-            style.backgroundColor = '#bec6cf';
+            style.backgroundColor = '#EFC38D';
         }
 
         return style

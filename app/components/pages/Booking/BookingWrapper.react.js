@@ -48,11 +48,11 @@ var BookingWrapper = React.createClass({
             }
 
             if (item.price >= 800) {
-                styles.color = '#b192d7'
-                styles.borderBottom = '2px solid #b192d7'
+                styles.color = '#D69B97'
+                styles.borderBottom = '2px solid #D69B97'
             } else if (item.price < 800 && item.price >= 700) {
-                styles.color = '#929ed7'
-                styles.borderBottom = '2px solid #929ed7'
+                styles.color = '#EFC38D'
+                styles.borderBottom = '2px solid #EFC38D'
             } else if (item.price < 700 && item.price >= 600) {
                 styles.color = '#6b8fbc'
                 styles.borderBottom = '2px solid #6b8fbc'

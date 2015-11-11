@@ -1,11 +1,14 @@
 var React = require('react');
 var classNames = require('classnames');
+var Link= require('react-router').Link;
+
+var MenuTopBar = require('./MenuTopBar.react.js');
 
 var mixin = require('baobab-react/mixins').branch;
 
 var MenuActions = require('../../actions/MenuActions.js');
 
-var SideMenuBar = React.createClass({
+var DesktopMenuBar = React.createClass({
 
     propTypes: {},
     mixins : [mixin],
@@ -15,68 +18,57 @@ var SideMenuBar = React.createClass({
         isInHouse: ['routes', 'isInHouse'],
         isInGallery: ['routes', 'isInGallery'],
         isInBooking: ['routes', 'isInBooking'],
-        menuIsOpen: ['menu', 'isOpen']
+        menuIsOpen: ['menu', 'isOpen'],
+        scrollPos: ['scrolling', 'scrollPosition']
     },
 
     componentWillMount : function() {},
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
 
-    handleClick: function() {
-        if (!this.state.menuIsOpen) {
-            MenuActions.isOpen(true)
-        } else {
-            MenuActions.isOpen(false)
-        }
-    },
-
-    getSideBarStyle: function() {
+    getLogoStyle: function() {
         var style = {
-            width: null
+            backgroundImage: 'url(img/logo-black.png)'
         }
-
-        style.width = '50px'
-
         return style
     },
-    getMenuBgStyle: function() {
+    getMenuBarStyle: function() {
         var style = {
-            backgroundColor: null,
-            WebkitTransform: null,
-            MozTransform: null,
-            msTransform: null,
-            OTransform: null,
-            transform: null
+            display: null
         }
         if (this.state.isInIntro) {
-            style.backgroundColor = 'transparent';
-            style.WebkitTransform = 'translateX(-50px)';
-            style.MozTransform = 'translateX(-50px)';
-            style.msTransform = 'translateX(-50px)';
-            style.OTransform = 'translateX(-50px)';
-            style.transform = 'translateX(-50px)';
-        } else if (this.state.isInHouse) {
-            style.backgroundColor = '#769ac4';
-        } else if (this.state.isInGallery) {
-            style.backgroundColor = '#cadffe';
-        } else if (this.state.isInBooking) {
-            style.backgroundColor = '#bec6cf';
-        } else if (this.state.isInHouse || this.state.isInBooking || this.state.isInGallery) {
-            style.WebkitTransform = 'translateX(0px)';
-            style.MozTransform = 'translateX(0px)';
-            style.msTransform = 'translateX(0px)';
-            style.OTransform = 'translateX(0px)';
-            style.transform = 'translateX(0px)';
+            style.display = 'none'
+        } else {
+            style.display = 'block'
         }
-
         return style
     },
+
+    getMenuBarClass: function() {
+        if (this.state.scrollPos > 0) {
+            return {
+                scrolled: true
+            }
+        } else {
+            return {
+                scrolled: false
+            }
+        }
+    },
+
     render : function() {
         return (
-            <div id='side-menu-bar' style={this.getSideBarStyle()}>
-                <div id="side-menu-bg" style={this.getMenuBgStyle()}></div>
-                <div id="menu-button" className={classNames({isOpen: this.state.menuIsOpen})} onClick={this.handleClick}>
-                    <span className='menu-button-line'></span>
+            <div id='desktop-menu-bar' className={classNames(this.getMenuBarClass())} style={this.getMenuBarStyle()}>
+                <MenuTopBar />
+                <div id='desktop-menu-row-1'>
+                    <div id='desktop-menu-bar-logo' style={this.getLogoStyle()}></div>
+                </div>
+                <div id="desktop-menu-row-3">
+                    <ul id="desktop-menu">
+                        <li classNames={classNames({active: this.state.isInHouse})}><Link to="the-house">The House</Link></li>
+                        <li classNames={classNames({active: this.state.isInGallery})}><Link to="gallery">Gallery & Video</Link></li>
+                        <li classNames={classNames({active: this.state.isInBooking})}><Link to="booking">Booking & Contact</Link></li>
+                    </ul>
                 </div>
             </div>
         )
@@ -84,4 +76,4 @@ var SideMenuBar = React.createClass({
 
 })
 
-module.exports = SideMenuBar; 
+module.exports = DesktopMenuBar; 

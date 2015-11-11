@@ -117,8 +117,8 @@ var GallerySlideShow = React.createClass({
                         <h2>{this.getImageFromProps().photoTitle}</h2>
                     </div>
                 </div>
-                <div id='gallery-prev' onClick={this.handlePrevClick}>Prev</div>
-                <div id='gallery-next' onClick={this.handleNextClick}>Next</div>
+                <div id='gallery-prev' onClick={this.handlePrevClick}><p>Prev</p></div>
+                <div id='gallery-next' onClick={this.handleNextClick}><p>Next</p></div>
             </div>
         )            
     }

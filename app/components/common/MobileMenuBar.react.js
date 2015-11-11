@@ -63,11 +63,11 @@ var TopMenuBar = React.createClass({
             style.OTransform = 'translateY(-50px)';
             style.transform = 'translateY(-50px)';
         } else if (this.state.isInHouse) {
-            style.backgroundColor = '#769ac4';
+            style.backgroundColor = '#A6E8D2';
         } else if (this.state.isInGallery) {
             style.backgroundColor = '#cadffe';
         } else if (this.state.isInBooking) {
-            style.backgroundColor = '#bec6cf';
+            style.backgroundColor = '#EFC38D';
         } else if (this.state.isInHouse || this.state.isInBooking || this.state.isInGallery) {
             style.WebkitTransform = 'translateX(0px)';
             style.MozTransform = 'translateX(0px)';

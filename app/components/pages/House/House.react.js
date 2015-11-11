@@ -48,13 +48,24 @@ var House = React.createClass({
 
         return style
     },
+    getWrapStyle: function() {
+        var style = {
+           paddingTop: null
+        }
+
+        if (this.state.scrollPos > 0) {
+            style.paddingTop = 60 + 136 + 'px';
+        } else {
+            style.paddingTop = 60;
+        }
+
+        return style
+    },
 
     render : function() {
         if (!this.state.isMobile) {
             return (
-                <div id='house-wrap'>
-                    <div id="main-content-logo" style={this.getStyle()}></div>
-                    <PageTitle />
+                <div id='house-wrap' style={this.getWrapStyle()}>
                     <HouseContent />
                     <NextPage {...this.props}/>
                 </div>

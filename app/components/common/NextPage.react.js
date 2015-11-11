@@ -59,7 +59,7 @@ var NextPage = React.createClass({
         } else {
             style.top = '100%';
             style.height = '100%';
-            style.backgroundColor = '#b6bfc9';
+            style.backgroundColor = '#EFC38D';
             style.opacity = '0';
             if (this.state.scrollPos + this.state.windowH == $(document).height()) {
                 style.top = '0%';
@@ -82,7 +82,7 @@ var NextPage = React.createClass({
             style.marginLeft = '20px';
             style.opacity = '1';
         } else if (this.state.isInHouse) {
-            style.color = '#b6bfc9';
+            style.color = '#EFC38D';
             style.marginLeft = '20px';
             style.opacity = '0';
 

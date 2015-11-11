@@ -35,11 +35,11 @@ var SideMenuBar = React.createClass({
         if (this.state.isInIntro) {
             style.backgroundColor = '#9ddbdc';
         } else if (this.state.isInHouse) {
-            style.backgroundColor = '#769ac4';
+            style.backgroundColor = '#A6E8D2';
         } else if (this.state.isInGallery) {
             style.backgroundColor = '#cadffe'
         } else if (this.state.isInBooking) {
-            style.backgroundColor = '#bec6cf';
+            style.backgroundColor = '#EFC38D';
         }
 
         return style

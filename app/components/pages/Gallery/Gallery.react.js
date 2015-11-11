@@ -32,28 +32,41 @@ var Gallery = React.createClass({
 
     getLogoStyle: function() {
         var style = {
-            zIndex: null
+            opacity: null
         }
 
-        if (this.state.isVideoActive && !this.state.isMobile) {
-            style.zIndex = '-1'
+        if (this.state.menuIsOpen) {
+            style.opacity = '0';
         } else {
-            style.zIndex = '102'
+            style.opacity = '1';
         }
 
         return style
     },
 
+
     render : function() {
-        if (!this.state.isVideoActive) {
+        if (!this.state.isVideoActive && !this.state.isMobile) {
             return (
                 <div id='gallery-wrap'>
-                    <div id="main-content-logo"></div>
+                    <GallerySlideShow photos={PHOTOS}/>
+                </div>
+            )
+        } else if (!this.state.isVideoActive && this.state.isMobile) {
+            return (
+                <div id='gallery-wrap'>
+                    <div id="main-content-logo" style={this.getLogoStyle()}></div>
                     <PageTitle />
                     <GallerySlideShow photos={PHOTOS}/>
                 </div>
             )
-        } else {
+        } else if (this.state.isVideoActive && !this.state.isMobile) {
+            return (
+                <div id='gallery-wrap'>
+                    <VideoPlayer />
+                </div>
+            )
+        } else if (this.state.isVideoActive && this.state.isMobile) {
             return (
                 <div id='gallery-wrap'>
                     <div id="main-content-logo" style={this.getLogoStyle()}></div>
@@ -61,7 +74,6 @@ var Gallery = React.createClass({
                     <VideoPlayer />
                 </div>
             )
-
         }
     }
 
