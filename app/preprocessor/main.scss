@@ -705,9 +705,6 @@ p {
 #the-cottage ul {
     margin-top: 50px;
 }
-#the-cottage li {
-    margin-bottom: 0.7em;
-}
 #extraInfo .list-bold {
     font-weight: 600;
 }
@@ -780,6 +777,7 @@ p {
 }
 #index-wrapper {
     position: relative;
+    left: -40px;
     width: 34px;
     height: 34px;
     margin-bottom: 20px;
@@ -1091,7 +1089,61 @@ p {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
+@media only screen and (min-width: 1864px) {
+    #house-wrap p {
+        font-size: 20px;
+    }
+    #house-wrap h1, #bookingRow1 h1, #contactRow1 h1{
+        font-size: 24px;
+    }
+    #intro-text {
+        width: 49.6410579%;
+        padding: 30px
+    }
+    #extraInfo li {
+        font-size: 18px;
+    }
+    #booking-wrap p {
+        font-size: 18px;
+    }
+    #booking-download h1 {
+        font-size: 20px;
+    }
+    #bookingRow2 h1, #contact-detail-row h1 {
+        font-size: 14px;
+    }
+    #price-list .prices {
+        font-size: 24px;
+    }    
+}
+@media only screen and (max-width: 1863px) and (min-width: 1450px) {
+    #house-wrap p {
+        font-size: 17px;
+    }
+    #house-wrap h1 {
+        font-size: 21px;
+    }
+    #bookingRow1 h1, #contactRow1 h1{
+        font-size: 19px;
+    }
+    #booking-wrap p {
+        font-size: 17px;
+    }
+    #bookingRow2 h1, #contact-detail-row h1 {
+        font-size: 12px;
+    }
+    #price-list .prices {
+        font-size: 21px;
+    }  
+}
+@media only screen and (max-width: 1449px) and (min-width: 1200px) {
+    #house-wrap p {
+        font-size: 15px;
+    }
+    #house-wrap h1 {
+        font-size: 19px;
+    }
+}
 @media only screen and (max-width: 768px) {
     html, body {
         height: 100%;
