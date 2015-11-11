@@ -25,7 +25,7 @@ var Homepage = React.createClass({
         return (
             <div id='header-image'>
                 <video autoPlay loop muted id="intro-vid">
-                    <source src='img/IntroResized.mp4' type="video/mp4" />
+                    <source src='https://player.vimeo.com/external/145372078.hd.mp4?s=f05447b48664c0174fc83334f48127784e90ee52&profile_id=119' type="video/mp4" />
                 </video>
                 <div id='header-logo'></div>
                 <NextPage {...this.props}/>

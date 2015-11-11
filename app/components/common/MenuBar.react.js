@@ -2,8 +2,8 @@ var React = require('react');
 
 var mixin = require('baobab-react/mixins').branch;
 
-var SideMenuBar = require('./SideMenuBar.react.js');
-var TopMenuBar = require('./TopMenuBar.react.js');
+var DesktopMenuBar = require('./DesktopMenuBar.react.js');
+var MobileMenuBar = require('./MobileMenuBar.react.js');
 
 var MenuBar = React.createClass({
 
@@ -26,11 +26,11 @@ var MenuBar = React.createClass({
 
         if (!this.state.isMobile) {
             return (
-                <SideMenuBar {...this.props}/>
+                <DesktopMenuBar {...this.props}/>
             )  
         } else {
             return (
-                <TopMenuBar {...this.props}/>
+                <MobileMenuBar {...this.props}/>
             )           
         }
         
