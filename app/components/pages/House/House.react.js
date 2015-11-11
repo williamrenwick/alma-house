@@ -18,7 +18,8 @@ var House = React.createClass({
         isInIntro: ['routes', 'isInIntro'],
         isInHouse: ['routes', 'isInHouse'],
         isInBooking: ['routes', 'isInBooking'],
-        menuIsOpen: ['menu', 'isOpen']
+        menuIsOpen: ['menu', 'isOpen'],
+        scrollPos: ['scrolling', 'scrollPosition']
     },
 
     componentWillMount : function() {
