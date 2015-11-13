@@ -25,7 +25,7 @@ var App = React.createClass({
 	},
 
 	componentDidMount: function() {
-		setTimeout(LoadingActions.isNowLoaded, 4)
+		setTimeout(LoadingActions.isNowLoaded, 4000)
 	},
 
 	render: function() {
