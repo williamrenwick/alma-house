@@ -54,7 +54,7 @@ var DesktopMenuBar = React.createClass({
 
     getMenuBarClass: function() {
         return {
-            scrolled: (this.state.scrollPos > 0 || this.state.isVideoActive) ? true : false,
+            scrolled: (this.state.scrollPos >= 1 || this.state.isVideoActive) ? true : false,
             dark: (this.state.isVideoActive) ? true : false
         }
     },

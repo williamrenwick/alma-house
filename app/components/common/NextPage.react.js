@@ -41,6 +41,15 @@ var NextPage = React.createClass({
                 width: '100px',
                 height: '150px'
             }
+        } else if (this.state.isInIntro) {
+            return {
+                height: '150px',
+                width: '130px;'
+            }
+        } else {
+            return {
+                display: 'none'
+            }
         }
     },
     getLineStyle: function() {
@@ -57,14 +66,10 @@ var NextPage = React.createClass({
             style.backgroundColor = '#ffffff';
             style.opacity = '1';
         } else {
-            style.top = '100%';
+            style.top = '0%';
             style.height = '100%';
             style.backgroundColor = '#EFC38D';
             style.opacity = '0';
-            if (this.state.scrollPos + this.state.windowH == $(document).height()) {
-                style.top = '0%';
-                style.opacity = '1';
-            }
         }
 
         return style
@@ -73,7 +78,8 @@ var NextPage = React.createClass({
         var style = {
             color: null,
             marginLeft: null,
-            opacity: null
+            opacity: null,
+            fontSize: null
         }
 
 
@@ -81,14 +87,12 @@ var NextPage = React.createClass({
             style.color = '#ffffff';
             style.marginLeft = '20px';
             style.opacity = '1';
+            style.fontSize = '18px'
         } else if (this.state.isInHouse) {
             style.color = '#EFC38D';
-            style.marginLeft = '20px';
+            style.marginLeft = '10px';
             style.opacity = '0';
 
-            if (this.state.scrollPos + this.state.windowH == $(document).height()) {
-                style.opacity = '1';
-            }
         }
 
         return style

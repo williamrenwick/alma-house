@@ -31,8 +31,6 @@ var House = React.createClass({
     componentDidMount: function() {
         var scrollTop = $(window).scrollTop();
 
-        console.log(scrollTop);
-
         ScrollActions.scrollPosUpdate(scrollTop);
     },
 

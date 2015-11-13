@@ -18,6 +18,7 @@ body {
     overflow-y: scroll;
 }
 html, body {
+    height: 100%;
     min-height: 100%;
 }
 ::-moz-selection {
@@ -76,13 +77,31 @@ a:active {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-/*@font-face {
-  font-family: 'apercu';
+@font-face {
+  font-family: 'ave';
+  font-weight: 200;
+  src: url('../public/fonts/avenir-light.woff') format('woff');
+}
+@font-face {
+  font-family: 'ave';
   font-weight: 400;
-  src: url('../public/fonts/apercu-webfont.woff') format('woff');
-}*/
-
+  src: url('../public/fonts/avenir-roman.woff') format('woff');
+}
+@font-face {
+  font-family: 'ave';
+  font-weight: 500;
+  src: url('../public/fonts/avenir-medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'bt';
+  font-weight: 400;
+  src: url('../public/fonts/bt-regular-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'bt';
+  font-weight: 200;
+  src: url('../public/fonts/bt-light-webfont.woff') format('woff');
+}
 
 $swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
 $swift-ease-in-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
@@ -179,7 +198,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
 
 ////////////////////////////// ---- COMMON ---- //////////////////////////////
 * {
-    font-family: 'avenir';
+    font-family: 'ave';
     -webkit-font-smoothing: antialiased;
     @include box-sizing(border-box);
     @include clearfix;
@@ -188,6 +207,120 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
 .noScroll {
     overflow: hidden;
 }
+
+#loader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include vendor-prefix(animation, loader-bg-change 4s);
+
+    & > #wavey-loader {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        @include center-align;
+        overflow: hidden;
+
+        & > #waves {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background-size: cover;
+            @include bg-image(center);
+            @include vendor-prefix(animation, move-waves 1s infinite linear);
+        }
+    }
+}
+@-webkit-keyframes loader-bg-change {
+    0% {
+        background-color: #A6E8D2;
+    } 
+    45% {
+        background-color: #cadffe;
+    }
+    90% {
+        background-color: #EFC38D;
+    }
+    100% {
+        background-color: #f7f7f5;
+    }
+}
+@-moz-keyframes loader-bg-change {
+    0% {
+        background-color: #A6E8D2;
+    } 
+    45% {
+        background-color: #cadffe;
+    }
+    90% {
+        background-color: #EFC38D;
+    }
+    100% {
+        background-color: #f7f7f5;
+    }
+}
+@-ms-keyframes loader-bg-change {
+    0% {
+        background-color: #A6E8D2;
+    } 
+    45% {
+        background-color: #cadffe;
+    }
+    90% {
+        background-color: #EFC38D;
+    }
+    100% {
+        background-color: #f7f7f5;
+    }
+}
+@keyframes loader-bg-change {
+    0% {
+        background-color: #A6E8D2;
+    } 
+    45% {
+        background-color: #cadffe;
+    }
+    90% {
+        background-color: #EFC38D;
+    }
+    100% {
+        background-color: #f7f7f5;
+    }
+}
+
+@-webkit-keyframes move-waves {
+    0% {
+        -webkit-transform: translateX(0);
+    } 
+    100% {
+        -webkit-transform: translateX(-50%);
+    }    
+}
+@-moz-keyframes move-waves {
+    0% {
+        -moz-transform: translateX(0);
+    } 
+    100% {
+        -moz-transform: translateX(-50%);
+    }   
+}
+@-ms-keyframes move-waves {
+    0% {
+        -ms-transform: translateX(0);
+    } 
+    100% {
+        -ms-transform: translateX(-50%);
+    }   
+}
+@keyframes move-waves {
+    0% {
+        transform: translateX(0);
+    } 
+    100% {
+        transform: translateX(-50%);
+    }   
+}
+
 
 #reactWrap {
     height: 100%;
@@ -255,6 +388,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     padding-bottom: 10px;
     text-align: center;
     cursor: pointer;
+    @include vendor-prefix(transition, all 0.2s);
 }
 #desktop-menu a {
     &:after {
@@ -264,6 +398,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
         bottom: -1px;
         width: 0;
         height: 2px;
+        @include vendor-prefix(transition, all 0.2s);
     }    
 }
 
@@ -275,6 +410,11 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
 }
 #desktop-menu li:hover {
     font-weight: 600;
+     @include vendor-prefix(transform, translateY(-4px)); 
+
+    & > a:after {
+        bottom: -5px;
+    }
 }
 #desktop-menu li:nth-of-type(1), #desktop-menu li:nth-of-type(2) {
     margin-right: 3.33%;
@@ -345,7 +485,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     left: 70px;
     bottom: 0;
     width: 100px;
-    height: 150px;
+    height: 120px;
     cursor: pointer;
     z-index: 11;
 }
@@ -505,7 +645,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     font-size: 12px;
 }
 p {
-    font-family: 'brandon text';
+    font-family: 'bt';
     font-size: 14px;
     font-weight: 200;
     line-height: 1.7em;
@@ -576,11 +716,13 @@ p {
 #house-wrap {
     padding-top: 60px;
     padding-left: 50px;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 #intro-img-1 {
-    width: 100%;
-    @include aspect-ratio(1177, 542);
+    width: calc(100% - 50px);
+    @include aspect-ratio(1177, 400);
 }
 #intro-img-2 {
     float: right;
@@ -638,9 +780,11 @@ p {
     @include vendor-prefix(transform, translateY(-38px));  
 }
 #house-content-wrap h1 {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 600;
+    color: #3FDEA9;
+    font-size: 16px;
     margin: 0 0 2em 0;
+    letter-spacing: 0.03em;
 }
 #bedRow1 {
     margin-top: 100px;
@@ -744,13 +888,122 @@ p {
 //>>>>>>>>>>>>>>>>>>>>>>>>>> ---- HOUSE END---- <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 ////////////////////////////// ---- GALLERY ---- //////////////////////////////
+#gallery-main-wrap {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 60px 6% 0;
+    background-color: #f7f7f5;
+}
+#gallery-main-wrap h1 {
+    position: relative;
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4587e9;
+    text-transform: capitalize;
+    letter-spacing: 0.07em;
 
-#gallery-wrap {
-    height: calc(100vh - 136px);
-    padding: 0;
+    &:before {
+        content: '';
+        position: absolute;
+        left: -28px;
+        top: 0;
+        height: 2px;
+        width: 18px;
+        background-color: #4587e9;
+        @include vertical-align;
+    }
+}
+#close-button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
 
-    &.videoPlaying {
-        height: 100vh;
+    .circle {
+      stroke-dasharray: 650;
+      stroke-dashoffset: 650;
+      @include vendor-prefix(transition, all 0.8s ease-in-out);
+      opacity: 0.3;
+    }
+}
+#close-button:hover {
+    .circle {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+#video-row {
+    margin-bottom: 47px;
+}
+#video-image {
+    width: 100%;
+    @include aspect-ratio(1138, 550);
+}
+.gallery-thumb-item {
+    position: relative;
+    float: left;
+    width: 21.7047452%;
+    margin-right: 4.39367311%;
+    margin-bottom: 48px;
+    cursor: pointer;
+
+    h2 {
+        font-size: 16px;
+        color: #cadffe;
+        letter-spacing: 0.03em;
+
+        span:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 2px;
+            background-color: #cadffe;
+            @include vendor-prefix(transition, all 0.2s);
+        }
+    }
+}
+.gallery-thumbnail {
+    background-color: #cadffe;
+    @include aspect-ratio(247, 189);
+
+    .content {
+        @include vendor-prefix(transition, all 0.2s);
+    }
+}
+
+#see-more-hover {
+    opacity: 0;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    @include center-align;
+
+    .circle {
+      stroke: #ffffff;
+      stroke-dasharray: 650;
+      stroke-dashoffset: 650;
+      @include vendor-prefix(transition, all 1s ease-in-out);
+      opacity: 0.3;
+    }
+}
+.gallery-thumb-item:hover  {
+    h2 span:after {
+        width: 100px;
+    }
+    .content {
+        opacity: 0.2;
+    }
+    #see-more-hover {
+        opacity: 1;
+
+        .circle {
+            stroke-dashoffset: 0;
+            opacity: 1;
+        }
     }
 }
 #gallery-slideshow {
@@ -797,7 +1050,7 @@ p {
     margin: 0;
 }
 #slide-info h5 > * {
-    font-family: 'brandon text' !important;
+    font-family: 'bt' !important;
     color: #bbb;
 }
 #slide-info h2 {
@@ -825,8 +1078,7 @@ p {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+    @include vendor-prefix(transition, all 0.3s ease-in-out 0s);
 
     > p {
         font-size: 12px;
@@ -843,8 +1095,7 @@ p {
       left: 0;
       background-color: #000;
       visibility: hidden;
-      -webkit-transition: all 0.3s ease-in-out 0s;
-      transition: all 0.3s ease-in-out 0s;
+      @include vendor-prefix(transition, all 0.3s ease-in-out 0s);
       z-index: 1;
     }
     &:after {
@@ -887,11 +1138,11 @@ p {
       stroke: #ffffff;
       stroke-dasharray: 650;
       stroke-dashoffset: 650;
-      -webkit-transition: all 0.5s ease-in-out;
+      @include vendor-prefix(transition, all 0.5s ease-in-out);
       opacity: 0.3;
     }
     .triangle {
-        -webkit-transition: all 0.7s ease-in-out;
+        @include vendor-prefix(transition, all 0.7s ease-in-out);
         stroke-dasharray: 240;
         stroke-dashoffset: 480;
         stroke: #ffffff;
@@ -979,10 +1230,14 @@ p {
     border-top: 2px solid #b6bfc9;
 }
 #bookingRow1 h1, #contactRow1 h1 {
-    font-weight: 500;
     font-size: 18px;
     margin: 0.6em 0 2em 0;
 }
+.section-title {
+    font-weight: 600;
+    color: #EFC38D;
+    letter-spacing: 0.07em;
+} 
 #bookingRow2 h1,
 #contact-detail-row h1 {
     font-weight: 600;
@@ -1010,6 +1265,7 @@ p {
     position: absolute;
     width: 100%;
     @include center-align;
+    cursor: pointer;
 }
 #booking-download h1 {
     margin-top: 0;
@@ -1029,7 +1285,7 @@ p {
     text-align: center;
     letter-spacing: 0.1em;
     border: 2px solid #3a3939;
-    cursor:pointer;
+    cursor: pointer;
 }
 #price-list {
     padding: 0;
@@ -1089,22 +1345,25 @@ p {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media only screen and (min-width: 1864px) {
+@media only screen and (min-width: 1601px) {
     #house-wrap p {
-        font-size: 20px;
+        font-size: 17px;
     }
     #house-wrap h1, #bookingRow1 h1, #contactRow1 h1{
-        font-size: 24px;
+        font-size: 21px;
     }
     #intro-text {
         width: 49.6410579%;
         padding: 30px
     }
     #extraInfo li {
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .gallery-thumb-item:nth-of-type(4n) {
+        margin-right: 0;
     }
     #booking-wrap p {
-        font-size: 18px;
+        font-size: 17px;
     }
     #booking-download h1 {
         font-size: 20px;
@@ -1116,12 +1375,15 @@ p {
         font-size: 24px;
     }    
 }
-@media only screen and (max-width: 1863px) and (min-width: 1450px) {
+@media only screen and (max-width: 1600px) and (min-width: 1450px) {
     #house-wrap p {
         font-size: 17px;
     }
     #house-wrap h1 {
         font-size: 21px;
+    }
+    .gallery-thumb-item:nth-of-type(4n) {
+        margin-right: 0;
     }
     #bookingRow1 h1, #contactRow1 h1{
         font-size: 19px;
@@ -1137,6 +1399,9 @@ p {
     }  
 }
 @media only screen and (max-width: 1449px) and (min-width: 1200px) {
+    .gallery-thumb-item:nth-of-type(4n) {
+        margin-right: 0;
+    }
     #house-wrap p {
         font-size: 15px;
     }
@@ -1144,6 +1409,30 @@ p {
         font-size: 19px;
     }
 }
+@media only screen and (max-width: 1199px) and (min-width: 900px) {
+    .gallery-thumb-item {
+        float: left;
+        width: 31%;
+        margin-right: 3.5%;
+
+        &:nth-of-type(3n) {
+            margin-right: 0;
+        }
+    }
+}
+@media only screen and (max-width: 899px) and (min-width: 769px) {
+    .gallery-thumb-item {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+    }
+
+}
+
 @media only screen and (max-width: 768px) {
     html, body {
         height: 100%;
@@ -1296,6 +1585,29 @@ p {
         padding-left: 6.530214426%;
         padding-right: 6.530214426%;
     }
+    #gallery-main-wrap h1 {
+        font-size: 14px;
+
+        &:before {
+            left: 0;
+            top: 100%;
+        }
+    }
+    .gallery-thumb-item {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+
+        h2 {
+            font-size: 12px;
+        }
+
+
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+    }
+
     #gallery-next, #gallery-prev {
         background-color: #f7f7f5;
         width: 50px;

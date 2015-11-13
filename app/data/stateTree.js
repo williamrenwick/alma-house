@@ -1,8 +1,8 @@
 var Baobab = require('baobab');
 
 var stateTree = new Baobab({
-	general: {
-		isNowLoaded: false
+	loading: {
+		isPreloaded: false
 	},
 	resize: {
 		currentWidth: null,
@@ -27,7 +27,8 @@ var stateTree = new Baobab({
 	},
 	gallery: {
 		currentSlide: null,
-		isVideoActive: false
+		isVideoActive: false,
+		isSliderActive: false
 	},
 	booking: {
 		bookingIsActive: true,

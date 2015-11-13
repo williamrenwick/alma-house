@@ -21,7 +21,7 @@ var GallerySlideShow = React.createClass({
     },
 
     componentWillMount : function() {
-        GalleryActions.setCurrentSlide(activeSlide);
+        activeSlide = this.state.currentSlide;
     },
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
@@ -65,14 +65,14 @@ var GallerySlideShow = React.createClass({
     },
     getButtonStyle: function() {
         var style = {
-            display: null
+            display: 'none'
         }
 
-        if (activeSlide == 0) {
+        /*if (activeSlide == 0) {
             style.display = 'block'
         } else {
             style.display = 'none'
-        }
+        }*/
         return style
     },
 
@@ -92,27 +92,14 @@ var GallerySlideShow = React.createClass({
         }
         GalleryActions.setCurrentSlide(activeSlide);
     },
-    handlePlayClick: function() {
-        if (!this.state.isVideoActive) {
-            GalleryActions.isVideoActive(true);
-        } else {
-            GalleryActions.isVideoActive(false);
-        }
-    },
 
     render : function() {
         return (
             <div id='gallery-slideshow'>
                 <div id='gallery-slide' style={this.getSlideStyle()}>
-                    <div id='play-button' style={this.getButtonStyle()} onClick={this.handlePlayClick}>
-                        <svg x="0px" y="0px"viewBox="0 0 100 100" enable-background="new 0 0 100 100">
-                            <polygon strokeWidth="3" className="triangle" fill="none" strokeLinecap="round" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="37.3,30.7 70.7,50 37.3,69.3 "/>
-                            <circle strokeWidth="3" className="circle" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" cx="50" cy="50" r="46"/>
-                        </svg>
-                    </div>
                     <div id="slide-info">
                         <div id="index-wrapper">
-                            <h5><span id="current-index" style={this.getCurrentIndexStyle()}>{activeSlide + 1}</span><span id="index-total">{this.props.photos.length}</span></h5>
+                            <h5><span id="current-index" style={this.getCurrentIndexStyle()}>{this.state.currentSlide + 1}</span><span id="index-total">{this.props.photos.length}</span></h5>
                         </div>
                         <h2>{this.getImageFromProps().photoTitle}</h2>
                     </div>
