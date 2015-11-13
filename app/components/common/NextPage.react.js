@@ -87,7 +87,7 @@ var NextPage = React.createClass({
                 style.color = '#ffffff';
                 style.marginLeft = '20px';
                 style.opacity = '1';
-                style.fontSize = '18px'
+                style.fontSize = '17px'
             } else if (this.state.isInHouse) {
                 style.opacity = '0';
             }
