@@ -1,7 +1,7 @@
 var React = require('react');
 
 var NextPage = require('../../common/NextPage.react.js'),
-    PageTitle = require('../../common/PageTitle.react.js'),
+    MobileSubMenu = require('../../common/MobileSubMenu.react.js'),
     GallerySlideShow = require('./GallerySlideShow.react.js'),
     GalleryMain = require('./GalleryMain.react.js'),
     VideoPlayer = require('./VideoPlayer.react.js');
@@ -19,6 +19,7 @@ var Gallery = React.createClass({
     mixins : [mixin],
     cursors: {
         windowW: ['resize', 'currentWidth'],
+        windowH: ['resize', 'currentHeight'],
         isMobile: ['resize', 'isMobile'],
         isInIntro: ['routes', 'isInIntro'],
         isInHouse: ['routes', 'isInHouse'],
@@ -51,18 +52,40 @@ var Gallery = React.createClass({
 
         return style
     },
+    wrapStyle: function() {
+        var style = {
+            height: null
+        }
 
+        if (!this.state.isMobile) {
+            style.height = (this.state.windowH - 136) + 'px';
+        } else {
+            style.height = (this.state.windowH - 50) + 'px';
+        }
 
+        return style
+    },
+
+    renderMobileElems: function() {
+        if (this.state.isMobile) {
+            return (
+                <MobileSubMenu />
+            )
+        }
+    },
     render : function() {
         if (!this.state.isVideoActive && !this.state.isSliderActive) {
             return (
                 <div id='gallery-wrap'>
+                    {this.renderMobileElems()}
                     <GalleryMain photos={PHOTOS}/>
+                    }
                 </div>
             )
         } else if (this.state.isSliderActive) {
             return (
-                <div id='gallery-wrap' style={{height: 'calc(100vh - 136px)'}}>
+                <div id='gallery-wrap' style={this.wrapStyle()}>
+                    {this.renderMobileElems()}
                     <div id="close-button" onClick={this.handleClose}>
                         <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32">
                             <circle className="circle" fill="none" stroke="#4587e9" strokeWidth="2" strokeMiterlimit="10" cx="16" cy="16" r="15"/>

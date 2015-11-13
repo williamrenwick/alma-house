@@ -1,7 +1,7 @@
 var React = require('react');
 
 var NextPage = require('../../common/NextPage.react.js');
-var PageTitle = require('../../common/PageTitle.react.js');
+var MobileSubMenu = require('../../common/MobileSubMenu.react.js');
 var BookingOrContact = require('./BookingOrContact.react.js');
 var ContentWrapper = require('./ContentWrapper.react.js');
 
@@ -46,34 +46,34 @@ var Booking = React.createClass({
            paddingTop: null
         }
 
-        if (this.state.scrollPos > 0) {
-            style.paddingTop = 60 + 136 + 'px';
+        if (!this.state.isMobile) {
+            if (this.state.scrollPos > 0) {
+                style.paddingTop = 60 + 136 + 'px';
+            } else if (this.state.scrollPos == 0) {
+                style.paddingTop = 60;
+            }  
         } else {
-            style.paddingTop = 60;
+            style.paddingTop = 105 + 'px';
         }
 
         return style
     },
+    renderMobileElems: function() {
+        if (this.state.isMobile) {
+            return (
+                <MobileSubMenu />
+            )
+        }
+    },
 
     render : function() {
-        if (!this.state.isMobile) {
-            return (
-                <div id='booking-wrap' style={this.getWrapStyle()}>
-                    <BookingOrContact />
-                    <ContentWrapper />
-                </div>
-            )
-        } else {
-            return (
-                <div id='booking-wrap'>
-                    <div id="main-content-logo" style={this.getLogoStyle()}></div>
-                    <div id="sub-menu-bg"></div>
-                    <BookingOrContact />
-                    <ContentWrapper />
-                    <PageTitle />
-                </div>
-            )            
-        }
+        return (
+            <div id='booking-wrap' style={this.getWrapStyle()}>
+                {this.renderMobileElems()}
+                <BookingOrContact />
+                <ContentWrapper />
+            </div>
+        )
     }
 
 })

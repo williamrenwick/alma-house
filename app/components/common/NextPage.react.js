@@ -82,17 +82,24 @@ var NextPage = React.createClass({
             fontSize: null
         }
 
-
-        if (this.state.isInIntro) {
-            style.color = '#ffffff';
-            style.marginLeft = '20px';
-            style.opacity = '1';
-            style.fontSize = '18px'
-        } else if (this.state.isInHouse) {
-            style.color = '#EFC38D';
-            style.marginLeft = '10px';
-            style.opacity = '0';
-
+        if (!this.state.isMobile) {
+            if (this.state.isInIntro) {
+                style.color = '#ffffff';
+                style.marginLeft = '20px';
+                style.opacity = '1';
+                style.fontSize = '18px'
+            } else if (this.state.isInHouse) {
+                style.opacity = '0';
+            }
+        } else {
+             if (this.state.isInIntro) {
+                style.color = '#ffffff';
+                style.marginLeft = '20px';
+                style.opacity = '1';
+                style.fontSize = '15px'
+            } else if (this.state.isInHouse) {
+                style.opacity = '0';
+            }
         }
 
         return style

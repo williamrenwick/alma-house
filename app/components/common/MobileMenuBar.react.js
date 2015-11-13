@@ -30,6 +30,19 @@ var TopMenuBar = React.createClass({
         }
     },
 
+    getLogoStyle: function() {
+        var style = {
+            opacity: null
+        }
+
+        if (this.state.menuIsOpen || this.state.isInIntro) {
+            style.opacity = '0';
+        } else {
+            style.opacity = '1';
+        }
+
+        return style
+    },
     getSideBarStyle: function() {
         var style = {
             display: null,
@@ -81,6 +94,7 @@ var TopMenuBar = React.createClass({
     render : function() {
         return (
             <div id='top-menu-bar' style={this.getSideBarStyle()}>
+                <div id="main-content-logo" style={this.getLogoStyle()}></div>
                 <div id="top-menu-bg" style={this.getMenuBgStyle()}></div>
                 <div id="menu-button" className={classNames({isOpen: this.state.menuIsOpen})} onClick={this.handleClick}>
                     <span className='menu-button-line'></span>

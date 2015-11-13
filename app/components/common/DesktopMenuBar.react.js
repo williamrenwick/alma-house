@@ -5,9 +5,11 @@ var Link= require('react-router').Link;
 var MenuTopBar = require('./MenuTopBar.react.js');
 
 var mixin = require('baobab-react/mixins').branch;
+var Link= require('react-router').Link;
 
 var MenuActions = require('../../actions/MenuActions.js');
 var GalleryActions = require('../../actions/GalleryActions.js');
+
 
 var DesktopMenuBar = React.createClass({
 
@@ -33,6 +35,7 @@ var DesktopMenuBar = React.createClass({
             GalleryActions.isVideoActive(false);
         }
     },
+
 
     getLogoStyle: function() {
         var style = {
@@ -64,7 +67,7 @@ var DesktopMenuBar = React.createClass({
             <div id='desktop-menu-bar' className={classNames(this.getMenuBarClass())} style={this.getMenuBarStyle()}>
                 <MenuTopBar />
                 <div id='desktop-menu-row-1'>
-                    <div id='desktop-menu-bar-logo' style={this.getLogoStyle()}></div>
+                    <Link to="home"><div id='desktop-menu-bar-logo' style={this.getLogoStyle()}></div></Link>
                 </div>
                 <div id="desktop-menu-row-3">
                     <ul id="desktop-menu">

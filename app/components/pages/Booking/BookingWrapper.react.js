@@ -82,7 +82,7 @@ var BookingWrapper = React.createClass({
                 <div id="bookingRow1">
                     <h1 className="section-title">Booking</h1>
                     <div id="booking-info" className="multi-col"  ref="booking">
-                        <p>Please see below for prices of the dates when you are interested in staying.<br/>The house is primarily set up for weekly rentals from Saturday - Saturday but occasionally weekend allocations can be made available upon request.<br/>Please also note the Terms and Conditions here for rental of the property.</p>
+                        <p>Please see below for prices of the dates when you are interested in staying.<br/><br/>The house is primarily set up for weekly rentals from Saturday - Saturday but occasionally weekend allocations can be made available upon request.<br/><br/>Please also note the<span className="text-link"><a href="downloadables/AlmaHouse-Terms&Conditions.docx">Terms and Conditions here</a></span>for rental of the property.</p>
                     </div>
                     <BookingDownload />
                 </div>

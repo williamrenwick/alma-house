@@ -50,8 +50,6 @@ var resizeFn = debounce(function() {
 		ResizeActions.isMobile(true);
 	}
 
-	console.log(isChrome, windowW, $('body').outerWidth());
-
 }, 50);
 
 

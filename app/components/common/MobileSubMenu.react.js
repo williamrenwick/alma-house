@@ -75,9 +75,12 @@ var PageTitle = React.createClass({
     },
     render : function() {
         return (
-            <div id='side-page-title' style={this.getSideTitleStyle()}>
-                <div id='page-title-line' style={this.getTitleLineStyle()}></div>
-                <h1>{this.getPageTitle()}</h1>
+            <div>
+                <div id='page-title' style={this.getSideTitleStyle()}>
+                    <div id='page-title-line' style={this.getTitleLineStyle()}></div>
+                    <h1>{this.getPageTitle()}</h1>
+                </div>
+                <div id="sub-menu-bg"></div>
             </div>
         )
     }

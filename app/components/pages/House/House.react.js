@@ -1,7 +1,7 @@
 var React = require('react');
 
 var NextPage = require('../../common/NextPage.react.js');
-var PageTitle = require('../../common/PageTitle.react.js');
+var MobileSubMenu = require('../../common/MobileSubMenu.react.js');
 var HouseContent = require('./HouseContent.react.js');
 
 var mixin = require('baobab-react/mixins').branch;
@@ -51,36 +51,35 @@ var House = React.createClass({
         var style = {
            paddingTop: null
         }
-
-        if (this.state.scrollPos > 0) {
-            style.paddingTop = 60 + 136 + 'px';
+        if (!this.state.isMobile) {
+            if (this.state.scrollPos > 0) {
+                style.paddingTop = 60 + 136 + 'px';
+            } else if (this.state.scrollPos == 0) {
+                style.paddingTop = 60;
+            }  
         } else {
-            style.paddingTop = 60;
+            style.paddingTop = 105 + 'px';
         }
+
 
         return style
     },
+    renderMobileElems: function() {
+        if (this.state.isMobile) {
+            return (
+                <MobileSubMenu />
+            )
+        }
+    },
 
     render : function() {
-        if (!this.state.isMobile) {
-            return (
-                <div id='house-wrap' style={this.getWrapStyle()}>
-                    <HouseContent />
-                    <NextPage {...this.props}/>
-                </div>
-            )            
-        } else {
-            return (
-                <div id='house-wrap'>
-                    <div id="main-content-logo" style={this.getStyle()}></div>
-                    <PageTitle />
-                    <div id="sub-menu-bg"></div>
-                    <HouseContent />
-                    <NextPage {...this.props}/>
-                </div>
-            ) 
-        }
-
+        return (
+            <div id='house-wrap' style={this.getWrapStyle()}>
+                {this.renderMobileElems()}
+                <HouseContent />
+                <NextPage {...this.props}/>
+            </div>
+        )            
     }
 
 })

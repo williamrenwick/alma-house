@@ -201,8 +201,6 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     font-family: 'ave';
     -webkit-font-smoothing: antialiased;
     @include box-sizing(border-box);
-    @include clearfix;
-
 }
 .noScroll {
     overflow: hidden;
@@ -325,17 +323,20 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
 #reactWrap {
     height: 100%;
     background-color: #f7f7f5;
+    @include clearfix;
 }
 #menu-top-bars {
     position: absolute;
     width: 100%;
-    height: 5px;
+    height: 10px;
+    @include clearfix;
 }
 .topBar {
     position: absolute;
     width: 100%;
     height: 100%;
-    @include vendor-prefix(transition, all 2s);  
+    @include vendor-prefix(transition, all 2s);
+    @include clearfix;  
 }
 #desktop-menu-bar {
     position: relative;
@@ -344,6 +345,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     height: 136px;
     background-color: #f7f7f5;
     z-index: 100;
+    @include clearfix;
 }
 #desktop-menu-row-1 {
     width: 100%;
@@ -351,10 +353,12 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     padding-top: 20px;
     border-top: 5px solid #eeeeee;
     @include vendor-prefix(transition, all 0.2s);
+    @include clearfix;
 }
 #desktop-menu-row-3 {
     margin-top: 50px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    @include clearfix;
 }
 #desktop-menu-bar-logo {
     margin: 0 auto;
@@ -368,6 +372,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     -o-transition: opacity 0.1s, transform 0.2s;
     transition: opacity 0.1s, transform 0.2s;
     opacity: 1;
+    @include clearfix;
 }
 
 #desktop-menu {
@@ -380,6 +385,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     font-size: 11px;
     font-weight: 500;
     text-transform: uppercase;
+    @include clearfix;
 }
 #desktop-menu li {
     position: relative;
@@ -389,6 +395,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
     text-align: center;
     cursor: pointer;
     @include vendor-prefix(transition, all 0.2s);
+    @include clearfix;
 }
 #desktop-menu a {
     &:after {
@@ -399,6 +406,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
         width: 0;
         height: 2px;
         @include vendor-prefix(transition, all 0.2s);
+        @include clearfix;
     }    
 }
 
@@ -468,9 +476,9 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
      }
 }
 #desktop-menu-bar.dark {
-    background-color: #171717;
+    background-color: #000000;
     color: #f7f7f5;
-    border-bottom: 1px solid rgba(0,0,0,0.9);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 #sub-menu-bg {
     position: fixed;
@@ -623,32 +631,30 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
         @include vendor-prefix(transform, rotate(90deg));
     }
 }
-#side-page-title {
-    position: fixed;
-    top: 60px;
-    left: 20px;
-    text-transform: uppercase;
-    @include vendor-prefix(transform, rotate(-90deg));
-    z-index: 11;
+#page-title {
+    display: none;
 }
-#page-title-line {
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    width: 16px;
-    height: 2px;
-    margin-top: -2px;
-}
+.text-link {
+    position: relative;
+    font-weight: 600;
+    margin: 0 0.3em;
+    @include vendor-prefix(transition, all 0.2s);
 
-#side-page-title h1 {
-    font-family: 'brown';
-    font-size: 12px;
+    &:after {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+    }
 }
 p {
     font-family: 'bt';
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 1.7em;
+    color: #666666;
     margin: 0;
 }
 #house-wrap, #booking-wrap, #gallery-wrap {
@@ -718,45 +724,55 @@ p {
     padding-left: 50px;
     max-width: 1600px;
     margin: 0 auto;
+    @include clearfix;
 }
 
 #intro-img-1 {
     width: calc(100% - 50px);
     @include aspect-ratio(1177, 400);
+    @include clearfix;
 }
 #intro-img-2 {
     float: right;
     width: 47%;
     margin-top: 60px;
     @include aspect-ratio(450, 252);
+    @include clearfix;
 }
 #intro-img-3 {
     width: 62.573099415%;
     margin-right: 3.39%;
     @include aspect-ratio(652, 458);
+    @include clearfix;
 }
 #intro-img-4 {
     width: 34.03%;
     @include aspect-ratio(354, 458);
+    @include clearfix;
 }
 #bed-img-1 {
     width: 43.8596491%;
     @include aspect-ratio(450, 293);
+    @include clearfix;
 }
 #bed-img-2, #bed-img-3, #bed-img-4 {
     width: 28.0701754%;
     @include aspect-ratio(290, 233);
+    @include clearfix;
 }
 #bed-img-2, #bed-img-3 {
     margin-right: 7.8947369%;
+    @include clearfix;
 }
 #outside-img-1 {
     width: 53.216374269%;
     @include aspect-ratio(546, 272);
+    @include clearfix;
 }
 #relaxation-img-1 {
     width: 43.85%;
     @include aspect-ratio(450, 274);
+    @include clearfix;
 }
 .content {
     background-size: cover;
@@ -766,11 +782,13 @@ p {
     width: 100%;
     padding-left: 6.530214426%;
     padding-right: 50px;
+    @include clearfix;
 }
 #intro-top-row {
     position: relative;
     padding-left: 6.432748538%;
     margin-bottom: 3.39%;
+    @include clearfix;
 }
 #intro-text {
     width: 49.6410579%;
@@ -778,6 +796,7 @@ p {
     margin-right: 2.6%; 
     background-color: #f7f7f5;
     @include vendor-prefix(transform, translateY(-38px));  
+    @include clearfix;
 }
 #house-content-wrap h1 {
     font-weight: 600;
@@ -785,22 +804,27 @@ p {
     font-size: 16px;
     margin: 0 0 2em 0;
     letter-spacing: 0.03em;
+    @include clearfix;
 }
 #bedRow1 {
     margin-top: 100px;
+    @include clearfix;
 }
 #bedRow2 {
     margin-top: 50px;
     margin-bottom: 50px;
+    @include clearfix;
 }
 #bedText {
     width: 32.86%;
     margin-left: 12.2807018%;
     margin-top: 2em;
+    @include clearfix;
 }
 #outside {
     position: relative;
     margin-bottom: 50px;
+    @include clearfix;
 }
 #outsideText {
     position: relative;
@@ -811,7 +835,7 @@ p {
 #relaxationText {
     width: 34.502923976%;
     margin-left: 12.280701754%;
-    margin-right: 9.356725146%
+    margin-right: 9.356725146%;
 }
 #extraInfo {
     margin-bottom: 160px;
@@ -894,6 +918,7 @@ p {
     margin: 0 auto;
     padding: 60px 6% 0;
     background-color: #f7f7f5;
+    @include clearfix;
 }
 #gallery-main-wrap h1 {
     position: relative;
@@ -903,6 +928,7 @@ p {
     color: #4587e9;
     text-transform: capitalize;
     letter-spacing: 0.07em;
+    @include clearfix;
 
     &:before {
         content: '';
@@ -922,6 +948,7 @@ p {
     height: 40px;
     width: 40px;
     cursor: pointer;
+    z-index: 100;
 
     .circle {
       stroke-dasharray: 650;
@@ -938,10 +965,12 @@ p {
 }
 #video-row {
     margin-bottom: 47px;
+    @include clearfix;
 }
 #video-image {
     width: 100%;
     @include aspect-ratio(1138, 550);
+    @include clearfix;
 }
 .gallery-thumb-item {
     position: relative;
@@ -950,25 +979,32 @@ p {
     margin-right: 4.39367311%;
     margin-bottom: 48px;
     cursor: pointer;
+    @include clearfix;
 
     h2 {
         font-size: 16px;
         color: #cadffe;
         letter-spacing: 0.03em;
+        @include clearfix;
 
-        span:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 2px;
-            background-color: #cadffe;
-            @include vendor-prefix(transition, all 0.2s);
+        span {
+            @include clearfix;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 80px;
+                height: 2px;
+                background-color: #cadffe;
+                @include vendor-prefix(transition, all 0.2s);
+                @include clearfix;
+            }
         }
     }
 }
 .gallery-thumbnail {
     background-color: #cadffe;
     @include aspect-ratio(247, 189);
+    @include clearfix;
 
     .content {
         @include vendor-prefix(transition, all 0.2s);
@@ -1082,7 +1118,7 @@ p {
 
     > p {
         font-size: 12px;
-        font-weight: 500;   
+        font-weight: 600;   
     }
 
     &:before {
@@ -1093,7 +1129,7 @@ p {
       height: 2px;
       bottom: -5px;
       left: 0;
-      background-color: #000;
+      background-color: #4587e9;
       visibility: hidden;
       @include vendor-prefix(transition, all 0.3s ease-in-out 0s);
       z-index: 1;
@@ -1109,7 +1145,7 @@ p {
     }
 
     &:hover {
-        color: #000000;
+        color: #4587e9;
         &:before {
             visibility: visible;
             width: 100%;
@@ -1164,7 +1200,7 @@ p {
 #video-player-wrap {
     width:100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,1);
     z-index: 103;
 }
 .youtube-video{
@@ -1181,15 +1217,18 @@ p {
 ////////////////////////////// ---- BOOKING ---- //////////////////////////////
 #booking-wrap {
     padding-top: 60px;
+    @include clearfix;
 }
 #booking {
     margin-bottom: 60px;
+    @include clearfix;
 }
 #booking-contact-buttons {
     position: fixed;
     float: left;
     width: 20.13536379%;
     margin-left: 11.590524534%;
+    @include clearfix;
 }
 #booking-contact-buttons ul {
     list-style: none;
@@ -1225,6 +1264,7 @@ p {
 #bookingRow1,
 #contactRow1 {
     margin-bottom: 50px;
+    @include clearfix;
 }
 #contactRow1 {
     border-top: 2px solid #b6bfc9;
@@ -1255,11 +1295,28 @@ p {
 }
 #booking-info {
     width: 63.714285714%;
+
+    .text-link {
+        &:hover {
+            color: #EFC38D;
+        }
+        &:after {
+            background-color: #EFC38D;
+        }
+    }
 }
 #booking-download {
     position: relative;
     width: 27.428571428%;
     margin: 0 3.142857142% 0 5.714285714%;
+
+    &:hover {
+
+        #download-button {
+            color: #EFC38D;
+            border: 2px solid #EFC38D;
+        }
+    }
 }
 #download-innerwrap {
     position: absolute;
@@ -1275,6 +1332,14 @@ p {
     text-align: center;
     letter-spacing: 0.1em;
 }
+#booking-icon {
+    position: absolute;
+    top: -2px;
+    @include horizontal-align;
+    width: 49px;
+    height: 24px;
+    z-index: -1;
+}
 #download-button {
     position: relative;
     margin: 0 auto;
@@ -1286,6 +1351,7 @@ p {
     letter-spacing: 0.1em;
     border: 2px solid #3a3939;
     cursor: pointer;
+    @include vendor-prefix(transition, all 0.5s ease-in-out);
 }
 #price-list {
     padding: 0;
@@ -1314,6 +1380,7 @@ p {
 }
 #contact-detail-row {
     margin-bottom: 30px;
+    @include clearfix;
 }
 #address {
     margin-right: 20%;
@@ -1325,6 +1392,10 @@ p {
 #contact-detail-row p {
     margin-top: 29px;
     line-height: 1em;
+    @include clearfix;
+    span {
+        @include clearfix;
+    }
 }
 #map-wrap {
     display: block;
@@ -1478,19 +1549,24 @@ p {
         background-size: contain;
         background-image: url(../public/img/arrow-grey-right.png);
     }
-    #side-page-title {
+    #page-title {
+        display: block;
         position: fixed;
         top: 60px;
         text-align: center;
         text-transform: uppercase;
         @include horizontal-align; 
     }
-    #side-page-title h1 {
+    #page-title h1 {
         font-family: 'brown';
         font-size: 12px;
     }
     #page-title-line {
+        position: absolute;
+        width: 16px;
+        height: 2px;
         top: 100%;
+        margin-top: -2px;
         @include horizontal-align;
     }
     #house-wrap, #booking-wrap {
@@ -1593,6 +1669,10 @@ p {
             top: 100%;
         }
     }
+    #close-button {
+        top: 12px;
+        right: 20px;
+    }
     .gallery-thumb-item {
         float: left;
         width: 48%;
@@ -1636,7 +1716,7 @@ p {
     #slide-info {
         position: absolute;
         left: -1px;
-        bottom: 0;
+        bottom: -1px;
         width: 30%;
         height: 10%;
         min-width: 101%;
@@ -1644,6 +1724,7 @@ p {
     }
     #index-wrapper {
         float: left;
+        left: -10px;
     }
     #slide-info h2 {
         font-size: 16px;
@@ -1684,14 +1765,14 @@ p {
         background-size: contain;
         background-image: url(../public/img/arrow-grey-right.png);
     }
-    #side-page-title {
+    #page-title {
         position: fixed;
         top: 60px;
         text-align: center;
         text-transform: uppercase;
         @include horizontal-align; 
     }
-    #side-page-title h1 {
+    #page-title h1 {
         font-family: 'brown';
         font-size: 12px;
     }
