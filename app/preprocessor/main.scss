@@ -1145,7 +1145,10 @@ p {
     }
 
     &:hover {
-        color: #4587e9;
+        p {
+           color: #4587e9; 
+        }
+
         &:before {
             visibility: visible;
             width: 100%;

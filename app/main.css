@@ -1903,17 +1903,17 @@ p {
   left: 0;
   background-color: #eeeeee;
 }
-/* line 1147, preprocessor/main.scss */
-#gallery-next:hover, #gallery-prev:hover {
+/* line 1148, preprocessor/main.scss */
+#gallery-next:hover p, #gallery-prev:hover p {
   color: #4587e9;
 }
-/* line 1149, preprocessor/main.scss */
+/* line 1152, preprocessor/main.scss */
 #gallery-next:hover:before, #gallery-prev:hover:before {
   visibility: visible;
   width: 100%;
 }
 
-/* line 1157, preprocessor/main.scss */
+/* line 1160, preprocessor/main.scss */
 #gallery-next {
   right: -71px;
   -webkit-transform: translate(0%, -50%) rotate(90deg);
@@ -1923,7 +1923,7 @@ p {
   transform: translate(0%, -50%) rotate(90deg);
 }
 
-/* line 1161, preprocessor/main.scss */
+/* line 1164, preprocessor/main.scss */
 #gallery-prev {
   left: -71px;
   -webkit-transform: translate(0%, -50%) rotate(-90deg);
@@ -1933,7 +1933,7 @@ p {
   transform: translate(0%, -50%) rotate(-90deg);
 }
 
-/* line 1166, preprocessor/main.scss */
+/* line 1169, preprocessor/main.scss */
 #play-button {
   position: absolute;
   width: 100px;
@@ -1947,7 +1947,7 @@ p {
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
-/* line 1173, preprocessor/main.scss */
+/* line 1176, preprocessor/main.scss */
 #play-button .circle {
   stroke: #ffffff;
   stroke-dasharray: 650;
@@ -1959,7 +1959,7 @@ p {
   transition: all 0.5s ease-in-out;
   opacity: 0.3;
 }
-/* line 1180, preprocessor/main.scss */
+/* line 1183, preprocessor/main.scss */
 #play-button .triangle {
   -webkit-transition: all 0.7s ease-in-out;
   -ms-transition: all 0.7s ease-in-out;
@@ -1971,19 +1971,19 @@ p {
   stroke: #ffffff;
   transform: translateY(0);
 }
-/* line 1188, preprocessor/main.scss */
+/* line 1191, preprocessor/main.scss */
 #play-button:hover .triangle {
   stroke-dashoffset: 0;
   opacity: 1;
   stroke: #ffffff;
 }
-/* line 1193, preprocessor/main.scss */
+/* line 1196, preprocessor/main.scss */
 #play-button:hover .circle {
   stroke-dashoffset: 0;
   opacity: 1;
 }
 
-/* line 1200, preprocessor/main.scss */
+/* line 1203, preprocessor/main.scss */
 #video-player-wrap {
   width: 100%;
   height: 100%;
@@ -1991,7 +1991,7 @@ p {
   z-index: 103;
 }
 
-/* line 1206, preprocessor/main.scss */
+/* line 1209, preprocessor/main.scss */
 .youtube-video {
   position: absolute;
   width: 81%;
@@ -2005,7 +2005,7 @@ p {
   transform: translate(-50%, -50%);
 }
 
-/* line 1218, preprocessor/main.scss */
+/* line 1221, preprocessor/main.scss */
 #booking-wrap {
   padding-top: 60px;
 }
@@ -2019,7 +2019,7 @@ p {
   clear: both;
 }
 
-/* line 1222, preprocessor/main.scss */
+/* line 1225, preprocessor/main.scss */
 #booking {
   margin-bottom: 60px;
 }
@@ -2033,7 +2033,7 @@ p {
   clear: both;
 }
 
-/* line 1226, preprocessor/main.scss */
+/* line 1229, preprocessor/main.scss */
 #booking-contact-buttons {
   position: fixed;
   float: left;
@@ -2050,13 +2050,13 @@ p {
   clear: both;
 }
 
-/* line 1233, preprocessor/main.scss */
+/* line 1236, preprocessor/main.scss */
 #booking-contact-buttons ul {
   list-style: none;
   line-height: 1.2em;
 }
 
-/* line 1237, preprocessor/main.scss */
+/* line 1240, preprocessor/main.scss */
 #booking-contact-buttons li {
   position: relative;
   font-size: 10px;
@@ -2066,12 +2066,12 @@ p {
   cursor: pointer;
 }
 
-/* line 1245, preprocessor/main.scss */
+/* line 1248, preprocessor/main.scss */
 #booking-contact-buttons li.active {
   color: #3a3939;
   margin-left: 30px;
 }
-/* line 1249, preprocessor/main.scss */
+/* line 1252, preprocessor/main.scss */
 #booking-contact-buttons li.active:after {
   position: absolute;
   content: '';
@@ -2087,14 +2087,14 @@ p {
   transform: translate(0, -50%);
 }
 
-/* line 1259, preprocessor/main.scss */
+/* line 1262, preprocessor/main.scss */
 #content-wrapper {
   float: left;
   margin-left: 34.26395939%;
   width: 59.221658206%;
 }
 
-/* line 1265, preprocessor/main.scss */
+/* line 1268, preprocessor/main.scss */
 #bookingRow1,
 #contactRow1 {
   margin-bottom: 50px;
@@ -2112,25 +2112,25 @@ p {
   clear: both;
 }
 
-/* line 1269, preprocessor/main.scss */
+/* line 1272, preprocessor/main.scss */
 #contactRow1 {
   border-top: 2px solid #b6bfc9;
 }
 
-/* line 1272, preprocessor/main.scss */
+/* line 1275, preprocessor/main.scss */
 #bookingRow1 h1, #contactRow1 h1 {
   font-size: 18px;
   margin: 0.6em 0 2em 0;
 }
 
-/* line 1276, preprocessor/main.scss */
+/* line 1279, preprocessor/main.scss */
 .section-title {
   font-weight: 600;
   color: #EFC38D;
   letter-spacing: 0.07em;
 }
 
-/* line 1282, preprocessor/main.scss */
+/* line 1285, preprocessor/main.scss */
 #bookingRow2 h1,
 #contact-detail-row h1 {
   font-weight: 600;
@@ -2139,44 +2139,44 @@ p {
   text-transform: uppercase;
 }
 
-/* line 1288, preprocessor/main.scss */
+/* line 1291, preprocessor/main.scss */
 #bookingRow2 h1 span {
   padding-top: 8px;
   border-top: 2px solid #EFC38D;
 }
 
-/* line 1292, preprocessor/main.scss */
+/* line 1295, preprocessor/main.scss */
 #contact-detail-row h1 span {
   padding-bottom: 8px;
   border-bottom: 2px solid #EFC38D;
 }
 
-/* line 1296, preprocessor/main.scss */
+/* line 1299, preprocessor/main.scss */
 #booking-info {
   width: 63.714285714%;
 }
-/* line 1300, preprocessor/main.scss */
+/* line 1303, preprocessor/main.scss */
 #booking-info .text-link:hover {
   color: #EFC38D;
 }
-/* line 1303, preprocessor/main.scss */
+/* line 1306, preprocessor/main.scss */
 #booking-info .text-link:after {
   background-color: #EFC38D;
 }
 
-/* line 1308, preprocessor/main.scss */
+/* line 1311, preprocessor/main.scss */
 #booking-download {
   position: relative;
   width: 27.428571428%;
   margin: 0 3.142857142% 0 5.714285714%;
 }
-/* line 1315, preprocessor/main.scss */
+/* line 1318, preprocessor/main.scss */
 #booking-download:hover #download-button {
   color: #EFC38D;
   border: 2px solid #EFC38D;
 }
 
-/* line 1321, preprocessor/main.scss */
+/* line 1324, preprocessor/main.scss */
 #download-innerwrap {
   position: absolute;
   width: 100%;
@@ -2190,7 +2190,7 @@ p {
   cursor: pointer;
 }
 
-/* line 1327, preprocessor/main.scss */
+/* line 1330, preprocessor/main.scss */
 #booking-download h1 {
   margin-top: 0;
   font-size: 16px;
@@ -2200,7 +2200,7 @@ p {
   letter-spacing: 0.1em;
 }
 
-/* line 1335, preprocessor/main.scss */
+/* line 1338, preprocessor/main.scss */
 #booking-icon {
   position: absolute;
   top: -2px;
@@ -2215,7 +2215,7 @@ p {
   z-index: -1;
 }
 
-/* line 1343, preprocessor/main.scss */
+/* line 1346, preprocessor/main.scss */
 #download-button {
   position: relative;
   margin: 0 auto;
@@ -2234,18 +2234,18 @@ p {
   transition: all 0.5s ease-in-out;
 }
 
-/* line 1356, preprocessor/main.scss */
+/* line 1359, preprocessor/main.scss */
 #price-list {
   padding: 0;
   list-style: none;
 }
 
-/* line 1360, preprocessor/main.scss */
+/* line 1363, preprocessor/main.scss */
 #price-list span {
   display: inline-block;
 }
 
-/* line 1363, preprocessor/main.scss */
+/* line 1366, preprocessor/main.scss */
 #price-list li {
   width: 50%;
   float: left;
@@ -2253,7 +2253,7 @@ p {
   margin-bottom: 1.6em;
 }
 
-/* line 1369, preprocessor/main.scss */
+/* line 1372, preprocessor/main.scss */
 #price-list .prices {
   font-size: 21px;
   font-weight: 600;
@@ -2261,17 +2261,17 @@ p {
   padding-bottom: 4px;
 }
 
-/* line 1375, preprocessor/main.scss */
+/* line 1378, preprocessor/main.scss */
 #price-list {
   font-size: 0.6em;
 }
 
-/* line 1378, preprocessor/main.scss */
+/* line 1381, preprocessor/main.scss */
 .currency {
   font-size: 0.8em;
 }
 
-/* line 1381, preprocessor/main.scss */
+/* line 1384, preprocessor/main.scss */
 #contact-detail-row {
   margin-bottom: 30px;
 }
@@ -2285,18 +2285,18 @@ p {
   clear: both;
 }
 
-/* line 1385, preprocessor/main.scss */
+/* line 1388, preprocessor/main.scss */
 #address {
   margin-right: 20%;
 }
 
-/* line 1388, preprocessor/main.scss */
+/* line 1391, preprocessor/main.scss */
 #contact-detail-row h2 {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-/* line 1392, preprocessor/main.scss */
+/* line 1395, preprocessor/main.scss */
 #contact-detail-row p {
   margin-top: 29px;
   line-height: 1em;
@@ -2320,7 +2320,7 @@ p {
   clear: both;
 }
 
-/* line 1400, preprocessor/main.scss */
+/* line 1403, preprocessor/main.scss */
 #map-wrap {
   display: block;
   position: relative;
@@ -2328,7 +2328,7 @@ p {
   padding-bottom: 75%;
 }
 
-/* line 1406, preprocessor/main.scss */
+/* line 1409, preprocessor/main.scss */
 #map-content {
   position: absolute;
   top: 0;
@@ -2341,136 +2341,136 @@ p {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 1601px) {
-  /* line 1420, preprocessor/main.scss */
+  /* line 1423, preprocessor/main.scss */
   #house-wrap p {
     font-size: 17px;
   }
 
-  /* line 1423, preprocessor/main.scss */
+  /* line 1426, preprocessor/main.scss */
   #house-wrap h1, #bookingRow1 h1, #contactRow1 h1 {
     font-size: 21px;
   }
 
-  /* line 1426, preprocessor/main.scss */
+  /* line 1429, preprocessor/main.scss */
   #intro-text {
     width: 49.6410579%;
     padding: 30px;
   }
 
-  /* line 1430, preprocessor/main.scss */
+  /* line 1433, preprocessor/main.scss */
   #extraInfo li {
     font-size: 16px;
   }
 
-  /* line 1433, preprocessor/main.scss */
+  /* line 1436, preprocessor/main.scss */
   .gallery-thumb-item:nth-of-type(4n) {
     margin-right: 0;
   }
 
-  /* line 1436, preprocessor/main.scss */
+  /* line 1439, preprocessor/main.scss */
   #booking-wrap p {
     font-size: 17px;
   }
 
-  /* line 1439, preprocessor/main.scss */
+  /* line 1442, preprocessor/main.scss */
   #booking-download h1 {
     font-size: 20px;
   }
 
-  /* line 1442, preprocessor/main.scss */
+  /* line 1445, preprocessor/main.scss */
   #bookingRow2 h1, #contact-detail-row h1 {
     font-size: 14px;
   }
 
-  /* line 1445, preprocessor/main.scss */
+  /* line 1448, preprocessor/main.scss */
   #price-list .prices {
     font-size: 24px;
   }
 }
 @media only screen and (max-width: 1600px) and (min-width: 1450px) {
-  /* line 1450, preprocessor/main.scss */
+  /* line 1453, preprocessor/main.scss */
   #house-wrap p {
     font-size: 17px;
   }
 
-  /* line 1453, preprocessor/main.scss */
+  /* line 1456, preprocessor/main.scss */
   #house-wrap h1 {
     font-size: 21px;
   }
 
-  /* line 1456, preprocessor/main.scss */
+  /* line 1459, preprocessor/main.scss */
   .gallery-thumb-item:nth-of-type(4n) {
     margin-right: 0;
   }
 
-  /* line 1459, preprocessor/main.scss */
+  /* line 1462, preprocessor/main.scss */
   #bookingRow1 h1, #contactRow1 h1 {
     font-size: 19px;
   }
 
-  /* line 1462, preprocessor/main.scss */
+  /* line 1465, preprocessor/main.scss */
   #booking-wrap p {
     font-size: 17px;
   }
 
-  /* line 1465, preprocessor/main.scss */
+  /* line 1468, preprocessor/main.scss */
   #bookingRow2 h1, #contact-detail-row h1 {
     font-size: 12px;
   }
 
-  /* line 1468, preprocessor/main.scss */
+  /* line 1471, preprocessor/main.scss */
   #price-list .prices {
     font-size: 21px;
   }
 }
 @media only screen and (max-width: 1449px) and (min-width: 1200px) {
-  /* line 1473, preprocessor/main.scss */
+  /* line 1476, preprocessor/main.scss */
   .gallery-thumb-item:nth-of-type(4n) {
     margin-right: 0;
   }
 
-  /* line 1476, preprocessor/main.scss */
+  /* line 1479, preprocessor/main.scss */
   #house-wrap p {
     font-size: 15px;
   }
 
-  /* line 1479, preprocessor/main.scss */
+  /* line 1482, preprocessor/main.scss */
   #house-wrap h1 {
     font-size: 19px;
   }
 }
 @media only screen and (max-width: 1199px) and (min-width: 900px) {
-  /* line 1484, preprocessor/main.scss */
+  /* line 1487, preprocessor/main.scss */
   .gallery-thumb-item {
     float: left;
     width: 31%;
     margin-right: 3.5%;
   }
-  /* line 1489, preprocessor/main.scss */
+  /* line 1492, preprocessor/main.scss */
   .gallery-thumb-item:nth-of-type(3n) {
     margin-right: 0;
   }
 }
 @media only screen and (max-width: 899px) and (min-width: 769px) {
-  /* line 1495, preprocessor/main.scss */
+  /* line 1498, preprocessor/main.scss */
   .gallery-thumb-item {
     float: left;
     width: 48%;
     margin-right: 4%;
   }
-  /* line 1500, preprocessor/main.scss */
+  /* line 1503, preprocessor/main.scss */
   .gallery-thumb-item:nth-of-type(2n) {
     margin-right: 0;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 1508, preprocessor/main.scss */
+  /* line 1511, preprocessor/main.scss */
   html, body {
     height: 100%;
     min-height: 100%;
   }
 
-  /* line 1513, preprocessor/main.scss */
+  /* line 1516, preprocessor/main.scss */
   #header-logo {
     right: auto;
     left: 50%;
@@ -2482,7 +2482,7 @@ p {
     transform: translate(-50%, -50%);
   }
 
-  /* line 1517, preprocessor/main.scss */
+  /* line 1520, preprocessor/main.scss */
   #main-content-logo {
     position: fixed;
     top: 17px;
@@ -2496,17 +2496,17 @@ p {
     background-position: center;
   }
 
-  /* line 1528, preprocessor/main.scss */
+  /* line 1531, preprocessor/main.scss */
   #menu-main-inner {
     width: 90%;
   }
 
-  /* line 1531, preprocessor/main.scss */
+  /* line 1534, preprocessor/main.scss */
   #menu-main-inner li {
     font-size: 22px;
   }
 
-  /* line 1534, preprocessor/main.scss */
+  /* line 1537, preprocessor/main.scss */
   #next-page {
     position: fixed;
     top: 60px;
@@ -2519,7 +2519,7 @@ p {
     cursor: pointer;
   }
 
-  /* line 1545, preprocessor/main.scss */
+  /* line 1548, preprocessor/main.scss */
   #next-page-arrow {
     width: 100%;
     height: 100%;
@@ -2529,7 +2529,7 @@ p {
     background-image: url(../public/img/arrow-grey-right.png);
   }
 
-  /* line 1552, preprocessor/main.scss */
+  /* line 1555, preprocessor/main.scss */
   #page-title {
     display: block;
     position: fixed;
@@ -2544,13 +2544,13 @@ p {
     transform: translate(-50%, 0);
   }
 
-  /* line 1560, preprocessor/main.scss */
+  /* line 1563, preprocessor/main.scss */
   #page-title h1 {
     font-family: 'brown';
     font-size: 12px;
   }
 
-  /* line 1564, preprocessor/main.scss */
+  /* line 1567, preprocessor/main.scss */
   #page-title-line {
     position: absolute;
     width: 16px;
@@ -2565,7 +2565,7 @@ p {
     transform: translate(-50%, 0);
   }
 
-  /* line 1572, preprocessor/main.scss */
+  /* line 1575, preprocessor/main.scss */
   #house-wrap, #booking-wrap {
     position: absolute;
     left: 0;
@@ -2574,7 +2574,7 @@ p {
     padding-left: 0px;
   }
 
-  /* line 1579, preprocessor/main.scss */
+  /* line 1582, preprocessor/main.scss */
   #gallery-wrap {
     position: absolute;
     top: 50px;
@@ -2583,24 +2583,24 @@ p {
     height: calc(100% - 50px);
   }
 
-  /* line 1586, preprocessor/main.scss */
+  /* line 1589, preprocessor/main.scss */
   #intro-inner-wrap, #bedroom-inner-wrap, #outside, #relaxation, #extraInfo {
     padding-right: 6.530214426%;
   }
 
-  /* line 1589, preprocessor/main.scss */
+  /* line 1592, preprocessor/main.scss */
   #intro-top-row {
     padding-left: 0%;
   }
 
-  /* line 1592, preprocessor/main.scss */
+  /* line 1595, preprocessor/main.scss */
   #intro-text {
     width: 100%;
     padding: 20px;
     margin-right: 0%;
   }
 
-  /* line 1597, preprocessor/main.scss */
+  /* line 1600, preprocessor/main.scss */
   #intro-img-1 {
     width: 100%;
     position: relative;
@@ -2621,19 +2621,19 @@ p {
     bottom: 0;
   }
 
-  /* line 1601, preprocessor/main.scss */
+  /* line 1604, preprocessor/main.scss */
   #intro-img-2 {
     float: left;
     width: 100%;
     margin-top: 10px;
   }
 
-  /* line 1606, preprocessor/main.scss */
+  /* line 1609, preprocessor/main.scss */
   #bedRow1 {
     margin-top: 20px;
   }
 
-  /* line 1609, preprocessor/main.scss */
+  /* line 1612, preprocessor/main.scss */
   #bedText {
     float: left;
     width: 100%;
@@ -2641,49 +2641,49 @@ p {
     margin-top: 2em;
   }
 
-  /* line 1615, preprocessor/main.scss */
+  /* line 1618, preprocessor/main.scss */
   #bed-img-1 {
     float: left;
     width: 100%;
     margin-top: 20px;
   }
 
-  /* line 1620, preprocessor/main.scss */
+  /* line 1623, preprocessor/main.scss */
   #outsideText, #relaxationText {
     width: 100%;
     margin: 0 0 20px 0;
   }
 
-  /* line 1624, preprocessor/main.scss */
+  /* line 1627, preprocessor/main.scss */
   #outside-img-1, #relaxation-img-1 {
     width: 100%;
     position: relative;
   }
 
-  /* line 1628, preprocessor/main.scss */
+  /* line 1631, preprocessor/main.scss */
   #usefulLinks ul {
     float: none;
     width: 100%;
     margin-right: 6.6%;
   }
 
-  /* line 1633, preprocessor/main.scss */
+  /* line 1636, preprocessor/main.scss */
   .extraRow {
     margin-top: 20px;
   }
 
-  /* line 1636, preprocessor/main.scss */
+  /* line 1639, preprocessor/main.scss */
   #the-cottage {
     margin-top: 30px;
   }
 
-  /* line 1639, preprocessor/main.scss */
+  /* line 1642, preprocessor/main.scss */
   #the-cottage, #amenities {
     width: 100%;
     margin-right: 0%;
   }
 
-  /* line 1643, preprocessor/main.scss */
+  /* line 1646, preprocessor/main.scss */
   #extraRow2 li {
     position: relative;
     display: block;
@@ -2692,18 +2692,18 @@ p {
     line-height: 2.8em;
   }
 
-  /* line 1650, preprocessor/main.scss */
+  /* line 1653, preprocessor/main.scss */
   #usefulLinks {
     margin-top: 20px;
     width: 100%;
   }
 
-  /* line 1654, preprocessor/main.scss */
+  /* line 1657, preprocessor/main.scss */
   #booking-wrap {
     padding-top: 12vh;
   }
 
-  /* line 1657, preprocessor/main.scss */
+  /* line 1660, preprocessor/main.scss */
   #content-wrapper {
     float: left;
     margin-left: 0;
@@ -2712,38 +2712,38 @@ p {
     padding-right: 6.530214426%;
   }
 
-  /* line 1664, preprocessor/main.scss */
+  /* line 1667, preprocessor/main.scss */
   #gallery-main-wrap h1 {
     font-size: 14px;
   }
-  /* line 1667, preprocessor/main.scss */
+  /* line 1670, preprocessor/main.scss */
   #gallery-main-wrap h1:before {
     left: 0;
     top: 100%;
   }
 
-  /* line 1672, preprocessor/main.scss */
+  /* line 1675, preprocessor/main.scss */
   #close-button {
     top: 12px;
     right: 20px;
   }
 
-  /* line 1676, preprocessor/main.scss */
+  /* line 1679, preprocessor/main.scss */
   .gallery-thumb-item {
     float: left;
     width: 48%;
     margin-right: 4%;
   }
-  /* line 1681, preprocessor/main.scss */
+  /* line 1684, preprocessor/main.scss */
   .gallery-thumb-item h2 {
     font-size: 12px;
   }
-  /* line 1686, preprocessor/main.scss */
+  /* line 1689, preprocessor/main.scss */
   .gallery-thumb-item:nth-of-type(2n) {
     margin-right: 0;
   }
 
-  /* line 1691, preprocessor/main.scss */
+  /* line 1694, preprocessor/main.scss */
   #gallery-next, #gallery-prev {
     background-color: #f7f7f5;
     width: 50px;
@@ -2754,7 +2754,7 @@ p {
     -o-transform: translate(0%, -50%) rotate(0deg);
     transform: translate(0%, -50%) rotate(0deg);
   }
-  /* line 1697, preprocessor/main.scss */
+  /* line 1700, preprocessor/main.scss */
   #gallery-next > p, #gallery-prev > p {
     position: absolute;
     margin: 0;
@@ -2766,26 +2766,26 @@ p {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
-  /* line 1703, preprocessor/main.scss */
+  /* line 1706, preprocessor/main.scss */
   #gallery-next:before, #gallery-prev:before {
     display: none;
   }
-  /* line 1706, preprocessor/main.scss */
+  /* line 1709, preprocessor/main.scss */
   #gallery-next:after, #gallery-prev:after {
     display: none;
   }
 
-  /* line 1710, preprocessor/main.scss */
+  /* line 1713, preprocessor/main.scss */
   #gallery-next {
     right: -25px;
   }
 
-  /* line 1713, preprocessor/main.scss */
+  /* line 1716, preprocessor/main.scss */
   #gallery-prev {
     left: -25px;
   }
 
-  /* line 1716, preprocessor/main.scss */
+  /* line 1719, preprocessor/main.scss */
   #slide-info {
     position: absolute;
     left: -1px;
@@ -2796,13 +2796,13 @@ p {
     padding: 10px;
   }
 
-  /* line 1725, preprocessor/main.scss */
+  /* line 1728, preprocessor/main.scss */
   #index-wrapper {
     float: left;
     left: -10px;
   }
 
-  /* line 1729, preprocessor/main.scss */
+  /* line 1732, preprocessor/main.scss */
   #slide-info h2 {
     font-size: 16px;
     margin-top: 8px;
@@ -2925,12 +2925,12 @@ p {
     }
 }*/
 @media only screen and (max-width: 600px) {
-  /* line 1851, preprocessor/main.scss */
+  /* line 1854, preprocessor/main.scss */
   #booking-info {
     width: 100%;
   }
 
-  /* line 1854, preprocessor/main.scss */
+  /* line 1857, preprocessor/main.scss */
   #booking-download {
     position: relative;
     width: 100%;
@@ -2938,7 +2938,7 @@ p {
   }
 }
 @media only screen and (max-width: 456px) {
-  /* line 1861, preprocessor/main.scss */
+  /* line 1864, preprocessor/main.scss */
   #telephone {
     margin-top: 20px;
   }
@@ -2946,7 +2946,7 @@ p {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 1877, preprocessor/main.scss */
+/* line 1880, preprocessor/main.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -2954,7 +2954,7 @@ p {
   *text-indent: -9999px;
 }
 
-/* line 1884, preprocessor/main.scss */
+/* line 1887, preprocessor/main.scss */
 .ir:before {
   content: "";
   display: block;
@@ -2962,13 +2962,13 @@ p {
   height: 150%;
 }
 
-/* line 1891, preprocessor/main.scss */
+/* line 1894, preprocessor/main.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 1896, preprocessor/main.scss */
+/* line 1899, preprocessor/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2980,7 +2980,7 @@ p {
   width: 10px;
 }
 
-/* line 1908, preprocessor/main.scss */
+/* line 1911, preprocessor/main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -2991,24 +2991,24 @@ p {
   width: auto;
 }
 
-/* line 1917, preprocessor/main.scss */
+/* line 1920, preprocessor/main.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 1922, preprocessor/main.scss */
+/* line 1925, preprocessor/main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 1927, preprocessor/main.scss */
+/* line 1930, preprocessor/main.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 1931, preprocessor/main.scss */
+/* line 1934, preprocessor/main.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -3017,7 +3017,7 @@ p {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 1940, preprocessor/main.scss */
+  /* line 1943, preprocessor/main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -3025,48 +3025,48 @@ p {
     text-shadow: none !important;
   }
 
-  /* line 1948, preprocessor/main.scss */
+  /* line 1951, preprocessor/main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 1952, preprocessor/main.scss */
+  /* line 1955, preprocessor/main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 1956, preprocessor/main.scss */
+  /* line 1959, preprocessor/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 1962, preprocessor/main.scss */
+  /* line 1965, preprocessor/main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 1967, preprocessor/main.scss */
+  /* line 1970, preprocessor/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 1972, preprocessor/main.scss */
+  /* line 1975, preprocessor/main.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 1977, preprocessor/main.scss */
+  /* line 1980, preprocessor/main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 1981, preprocessor/main.scss */
+  /* line 1984, preprocessor/main.scss */
   img {
     max-width: 100% !important;
   }
@@ -3075,7 +3075,7 @@ p {
     margin: 0.5cm;
 }
 
-  /* line 1991, preprocessor/main.scss */
+  /* line 1994, preprocessor/main.scss */
   p,
   h2,
   h3 {
@@ -3083,7 +3083,7 @@ p {
     widows: 3;
   }
 
-  /* line 1997, preprocessor/main.scss */
+  /* line 2000, preprocessor/main.scss */
   h2,
   h3 {
     page-break-after: avoid;
