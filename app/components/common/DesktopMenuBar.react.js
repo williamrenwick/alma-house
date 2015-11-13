@@ -30,13 +30,6 @@ var DesktopMenuBar = React.createClass({
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
 
-    handleLiClick: function() {
-        if (this.state.isVideoActive) {
-            GalleryActions.isVideoActive(false);
-        }
-    },
-
-
     getLogoStyle: function() {
         var style = {
             backgroundImage: (this.state.isVideoActive) ? 'url(img/logo-white.png)' : 'url(img/logo-black.png)'
@@ -71,9 +64,9 @@ var DesktopMenuBar = React.createClass({
                 </div>
                 <div id="desktop-menu-row-3">
                     <ul id="desktop-menu">
-                        <li classNames={classNames({active: this.state.isInHouse})} onClick={this.handleLiClick}><Link to="the-house">The House</Link></li>
-                        <li classNames={classNames({active: this.state.isInGallery})} onClick={this.handleLiClick}><Link to="gallery">Gallery & Video</Link></li>
-                        <li classNames={classNames({active: this.state.isInBooking})} onClick={this.handleLiClick}><Link to="booking">Booking & Contact</Link></li>
+                        <li classNames={classNames({active: this.state.isInHouse})}><Link to="the-house">The House</Link></li>
+                        <li classNames={classNames({active: this.state.isInGallery})}><Link to="gallery">Gallery & Video</Link></li>
+                        <li classNames={classNames({active: this.state.isInBooking})}><Link to="booking">Booking & Contact</Link></li>
                     </ul>
                 </div>
             </div>

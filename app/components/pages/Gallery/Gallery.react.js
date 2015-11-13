@@ -11,7 +11,7 @@ var mixin = require('baobab-react/mixins').branch;
 var RouteActions = require('../../../actions/RouteActions.js'),
     GalleryActions = require('../../../actions/GalleryActions.js');
 
-var PHOTOS = require('../../../data/photoList.js');
+var PHOTOS = require('../../../data/photoList.js').galleryPhotos;
 
 var Gallery = React.createClass({
 
