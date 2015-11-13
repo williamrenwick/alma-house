@@ -12,7 +12,9 @@ var Homepage = React.createClass({
     cursors: {
         windowW: ['resize', 'currentWidth'],
         windowH: ['resize', 'currentHeight'],
-        scrollPos: ['scrolling', 'scrollPosition']
+        scrollPos: ['scrolling', 'scrollPosition'],
+        isSliderActive: ['gallery', 'isSliderActive'],
+        isVideoActive: ['gallery', 'isVideoActive']
     },
 
     componentWillMount : function() {
@@ -20,6 +22,15 @@ var Homepage = React.createClass({
     },
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
+
+    componentDidMount: function() {
+        if (this.state.isSliderActive) {
+            GalleryActions.isSliderActive(false);
+        }
+        if (this.state.isVideoActive) {
+            GalleryActions.isVideoActive(false);
+        }
+    },
 
     render : function() {
         return (

@@ -6,7 +6,8 @@ var BookingOrContact = require('./BookingOrContact.react.js');
 var ContentWrapper = require('./ContentWrapper.react.js');
 
 var mixin = require('baobab-react/mixins').branch;
-var RouteActions = require('../../../actions/RouteActions.js');
+var RouteActions = require('../../../actions/RouteActions.js'),
+    GalleryActions = require('../../../actions/GalleryActions.js');
 
 var Booking = React.createClass({
 
@@ -19,7 +20,9 @@ var Booking = React.createClass({
         isInHouse: ['routes', 'isInHouse'],
         isInBooking: ['routes', 'isInBooking'],
         menuIsOpen: ['menu', 'isOpen'],
-        scrollPos: ['scrolling', 'scrollPosition']
+        scrollPos: ['scrolling', 'scrollPosition'],
+        isSliderActive: ['gallery', 'isSliderActive'],
+        isVideoActive: ['gallery', 'isVideoActive']
     },
 
     componentWillMount : function() {
@@ -27,6 +30,15 @@ var Booking = React.createClass({
     },
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
+
+    componentDidMount: function() {
+        if (this.state.isSliderActive) {
+            GalleryActions.isSliderActive(false);
+        }
+        if (this.state.isVideoActive) {
+            GalleryActions.isVideoActive(false);
+        }
+    },
 
     getLogoStyle: function() {
         var style = {

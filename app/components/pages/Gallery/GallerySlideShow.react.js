@@ -59,8 +59,6 @@ var GallerySlideShow = React.createClass({
             style.transform = 'translateX(0px)';
         }
 
-        console.log(this.state.currentSlide)
-
         return style
     },
     getButtonStyle: function() {

@@ -19,7 +19,9 @@ var House = React.createClass({
         isInHouse: ['routes', 'isInHouse'],
         isInBooking: ['routes', 'isInBooking'],
         menuIsOpen: ['menu', 'isOpen'],
-        scrollPos: ['scrolling', 'scrollPosition']
+        scrollPos: ['scrolling', 'scrollPosition'],
+        isSliderActive: ['gallery', 'isSliderActive'],
+        isVideoActive: ['gallery', 'isVideoActive']
     },
 
     componentWillMount : function() {
@@ -32,6 +34,13 @@ var House = React.createClass({
         var scrollTop = $(window).scrollTop();
 
         ScrollActions.scrollPosUpdate(scrollTop);
+
+        if (this.state.isSliderActive) {
+            GalleryActions.isSliderActive(false);
+        }
+        if (this.state.isVideoActive) {
+            GalleryActions.isVideoActive(false);
+        }
     },
 
     getStyle: function() {

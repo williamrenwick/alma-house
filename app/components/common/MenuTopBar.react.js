@@ -17,10 +17,6 @@ var MenuTopBar = React.createClass({
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
 
-    componentDidMount: function() {
-        console.log('menu bars mounted')
-    },
-
     getCurrentBarStyle: function() {
         var style = {
             backgroundColor: null

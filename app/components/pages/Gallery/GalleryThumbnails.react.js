@@ -23,10 +23,6 @@ var GalleryThumbnails = React.createClass({
     componentWillReceiveProps: function() {},
     componentWillUnmount : function() {},
 
-    handleClick: function() {
-        console.log(this.props.index)
-    },
-
     renderThumbnails: function() {
         return this.props.photos.map((thumb, i) => { 
             return (

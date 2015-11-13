@@ -87,7 +87,7 @@ var NextPage = React.createClass({
                 style.color = '#ffffff';
                 style.marginLeft = '20px';
                 style.opacity = '1';
-                style.fontSize = '17px'
+                style.fontSize = '17px';
             } else if (this.state.isInHouse) {
                 style.opacity = '0';
             }
@@ -96,7 +96,7 @@ var NextPage = React.createClass({
                 style.color = '#ffffff';
                 style.marginLeft = '20px';
                 style.opacity = '1';
-                style.fontSize = '15px'
+                style.fontSize = '15px';
             } else if (this.state.isInHouse) {
                 style.opacity = '0';
             }
