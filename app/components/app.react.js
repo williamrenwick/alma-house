@@ -40,7 +40,7 @@ var App = React.createClass({
 	},
 
 	componentDidMount: function() {
-		preloader();
+		//preloader();
 		setTimeout(LoadingActions.isNowLoaded, 4000)
 	},
 
