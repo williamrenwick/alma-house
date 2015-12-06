@@ -639,7 +639,7 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
 }
 .text-link {
     position: relative;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0 0.3em;
     @include vendor-prefix(transition, all 0.2s);
 
@@ -802,7 +802,7 @@ p {
     @include clearfix;
 }
 #house-content-wrap h1 {
-    font-weight: 600;
+    font-weight: 500;
     color: #3FDEA9;
     font-size: 16px;
     margin: 0 0 2em 0;
@@ -877,7 +877,7 @@ p {
     margin-top: 50px;
 }
 #extraInfo .list-bold {
-    font-weight: 600;
+    font-weight: 500;
 }
 #the-cottage, #amenities {
     width: 53.118908382%;
@@ -893,7 +893,7 @@ p {
 }
 #usefulLinks li.title {
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
 }
 #usefulLinks li.link {
@@ -927,7 +927,7 @@ p {
     position: relative;
     margin-bottom: 32px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     color: #4587e9;
     text-transform: capitalize;
     letter-spacing: 0.07em;
@@ -1121,7 +1121,7 @@ p {
 
     > p {
         font-size: 12px;
-        font-weight: 600;   
+        font-weight: 500;   
     }
 
     &:before {
@@ -1244,7 +1244,7 @@ p {
     position: relative;
     font-size: 10px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     color: #b6bfc9;
     cursor: pointer;
 }
@@ -1280,13 +1280,13 @@ p {
     margin: 0.6em 0 2em 0;
 }
 .section-title {
-    font-weight: 600;
+    font-weight: 500;
     color: #EFC38D;
     letter-spacing: 0.07em;
 } 
 #bookingRow2 h1,
 #contact-detail-row h1 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 11px;
     margin: 0.6em 0 2em 0;
     text-transform: uppercase;
@@ -1333,7 +1333,7 @@ p {
 #booking-download h1 {
     margin-top: 0;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.1em;
@@ -1374,7 +1374,7 @@ p {
 }
 #price-list .prices {
     font-size: 21px;
-    font-weight: 600;
+    font-weight: 500;
     margin-right: 1em;
     padding-bottom: 4px;
 }

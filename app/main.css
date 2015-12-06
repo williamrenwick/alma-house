@@ -860,7 +860,7 @@ a:active {
 /* line 640, preprocessor/main.scss */
 .text-link {
   position: relative;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0 0.3em;
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -1289,7 +1289,7 @@ p {
 
 /* line 804, preprocessor/main.scss */
 #house-content-wrap h1 {
-  font-weight: 600;
+  font-weight: 500;
   color: #3FDEA9;
   font-size: 16px;
   margin: 0 0 2em 0;
@@ -1436,7 +1436,7 @@ p {
 
 /* line 879, preprocessor/main.scss */
 #extraInfo .list-bold {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* line 882, preprocessor/main.scss */
@@ -1460,7 +1460,7 @@ p {
 /* line 894, preprocessor/main.scss */
 #usefulLinks li.title {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 12px;
 }
 
@@ -1513,7 +1513,7 @@ p {
   position: relative;
   margin-bottom: 32px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   color: #4587e9;
   text-transform: capitalize;
   letter-spacing: 0.07em;
@@ -1879,7 +1879,7 @@ p {
 /* line 1122, preprocessor/main.scss */
 #gallery-next > p, #gallery-prev > p {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
 }
 /* line 1127, preprocessor/main.scss */
 #gallery-next:before, #gallery-prev:before {
@@ -2067,7 +2067,7 @@ p {
   position: relative;
   font-size: 10px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   color: #b6bfc9;
   cursor: pointer;
 }
@@ -2131,7 +2131,7 @@ p {
 
 /* line 1282, preprocessor/main.scss */
 .section-title {
-  font-weight: 600;
+  font-weight: 500;
   color: #EFC38D;
   letter-spacing: 0.07em;
 }
@@ -2139,7 +2139,7 @@ p {
 /* line 1288, preprocessor/main.scss */
 #bookingRow2 h1,
 #contact-detail-row h1 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 11px;
   margin: 0.6em 0 2em 0;
   text-transform: uppercase;
@@ -2200,7 +2200,7 @@ p {
 #booking-download h1 {
   margin-top: 0;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.1em;
@@ -2262,7 +2262,7 @@ p {
 /* line 1375, preprocessor/main.scss */
 #price-list .prices {
   font-size: 21px;
-  font-weight: 600;
+  font-weight: 500;
   margin-right: 1em;
   padding-bottom: 4px;
 }
