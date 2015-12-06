@@ -34,7 +34,7 @@ var Homepage = React.createClass({
 
     render : function() {
         return (
-            <div id='header-image'>
+            <div id='header-image' style={{backgroundImage: 'url(img/headerImage.png)'}}>
                 <video autoPlay loop muted id="intro-vid">
                     <source src='https://player.vimeo.com/external/145372078.hd.mp4?s=f05447b48664c0174fc83334f48127784e90ee52&profile_id=119' type="video/mp4" />
                 </video>

@@ -1,28 +1,13 @@
 var ResizeActions = require('../actions/ResizeActions.js');
 var StateTree = require('../data/stateTree.js');
 var debounce = require('lodash.debounce');
+var $window = $(window);
+var $doc = $(document);
 
-var $window = $(window),
-	$doc = $(document); 
-
-function checkForChrome() {
-	var isChromium = window.chrome,
-	    vendorName = window.navigator.vendor,
-	    isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
-	    isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
-
-	if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {
-	   // is Google chrome 
-	   return true
-	} else { 
-	   // not Google chrome 
-	   return false
-	}	
-}
-
+import amIChrome from '../data/amIChrome.js'
 
 var resizeFn = debounce(function() {
-	var isChrome = checkForChrome(),
+	var isChrome = amIChrome(),
 		widthCalc = function() {
 			if (isChrome == true) {
 				return window.outerWidth

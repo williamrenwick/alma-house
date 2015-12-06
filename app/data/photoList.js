@@ -1,6 +1,8 @@
 var houseDirectory = 'img/gallery/',
     galleryDirectory = 'img/gallery/full/';
 
+var homepageImage = 'img/headerImage.png';
+
 var galleryImages = [
     {
         url: galleryDirectory + 'alma-img-34.jpg',
@@ -137,7 +139,7 @@ var houseImages = [
     }
 ]
 
-var allPhotos = [];
+var allPhotos = [homepageImage];
 
 
 (function callLoops() {
