@@ -1,7 +1,7 @@
 var houseDirectory = 'img/gallery/',
     galleryDirectory = 'img/gallery/full/';
 
-var homepageImage = 'img/headerImage.png';
+var homepageImage = 'img/headerImage.jpg';
 
 var galleryImages = [
     {
