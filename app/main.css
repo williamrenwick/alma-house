@@ -527,7 +527,7 @@ a:active {
 
 /* line 421, preprocessor/main.scss */
 #desktop-menu li:hover {
-  font-weight: 600;
+  font-weight: 500;
   -webkit-transform: translateY(-4px);
   -ms-transform: translateY(-4px);
   -moz-transform: translateY(-4px);
