@@ -474,7 +474,6 @@ $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
 
     & #desktop-menu-bar-logo {
         opacity: 0;
-        @include vendor-prefix(transform, translateY(-20px));
      }
 }
 #desktop-menu-bar.dark {
