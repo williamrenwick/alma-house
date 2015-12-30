@@ -38,7 +38,7 @@ var VideoPlayer = React.createClass({
         return (
             <div id="video-player-wrap">
                 <Youtube 
-                    url={'https://www.youtube.com/watch?v=yQ9dR6MqCPE'}
+                    url={'https://www.youtube.com/watch?v=LlkjZQ1tNHI'}
                     className='youtube-video'
                     opts={opts}
                     onPause={this.endOrPause}
